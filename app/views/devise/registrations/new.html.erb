@@ -17,6 +17,33 @@
                 input_html: { autocomplete: "new-password" } %>
   </div>
 
+  <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "firstname" }%>
+    <%= f.input :last_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "lastname" }%>
+    <%= f.input :age,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "age" }%>
+    <%= f.input :gender,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "gender" }%>
+    <%= f.input :skin_type,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "skin type" }%>
+    <%= f.input :skin_color,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "skin color" }%>
+  </div>
+
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
   </div>
