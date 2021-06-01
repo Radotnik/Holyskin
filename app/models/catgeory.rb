@@ -1,3 +1,3 @@
 class Catgeory < ApplicationRecord
-  has_many :trackers
+  belongs_to :trackers
 end
