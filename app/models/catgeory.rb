@@ -1,0 +1,2 @@
+class Catgeory < ApplicationRecord
+end
