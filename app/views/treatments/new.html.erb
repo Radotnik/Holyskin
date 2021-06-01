@@ -1,0 +1,12 @@
+<h1> Add new treatment </h1>
+  <%= form_for(@treatment) do |f| %>
+    <% f.label :skin_condition %>
+    <% f.text_field :skin_condition %>
+    <% f.label :date_start %>
+    <% f.date :date_start %>
+    <% f.label :date_end %>
+    <% f.date :date_end %>
+    <% f.label :status %>
+    <% f.text_field :status %>
+  <% end %>
+
