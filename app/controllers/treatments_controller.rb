@@ -17,7 +17,7 @@ class TreatmentsController < ApplicationController
 #   def create
 #     @treatment = Treatment.new(params[:treatment])
 #     @treatment.save
-#     redirect_to_treatment_path(@treatment)
+#     redirect_to treatment_path(@treatment)
 #   end
 
 #   def edit
@@ -27,13 +27,13 @@ class TreatmentsController < ApplicationController
 #   def update
 #     @treatment = treatment_params
 #     @treatment.update
-#     redirect_to_treatment_path(@treatment)
+#     redirect_to treatment_path(@treatment)
 #   end
 
 #   def destroy
 #     @treatment = treatment_params
 #     @treatment.destroy
-#     redirect_to_treatment_path
+#     redirect_to treatment_path
 #   end
 
 #   private
