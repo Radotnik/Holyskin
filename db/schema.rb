@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_085424) do
+ActiveRecord::Schema.define(version: 2021_06_02_094211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 2021_06_02_085424) do
     t.string "group"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "tracker_id", null: false
-    t.index ["tracker_id"], name: "index_categories_on_tracker_id"
   end
 
   create_table "trackers", force: :cascade do |t|
@@ -30,6 +28,9 @@ ActiveRecord::Schema.define(version: 2021_06_02_085424) do
     t.bigint "treatment_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "category_id", null: false
+    t.string "photo"
+    t.index ["category_id"], name: "index_trackers_on_category_id"
     t.index ["treatment_id"], name: "index_trackers_on_treatment_id"
   end
 
@@ -57,12 +58,11 @@ ActiveRecord::Schema.define(version: 2021_06_02_085424) do
     t.string "gender"
     t.string "skin_color"
     t.string "skin_type"
-
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "categories", "trackers"
+  add_foreign_key "trackers", "categories"
   add_foreign_key "trackers", "treatments"
   add_foreign_key "treatments", "users"
 end

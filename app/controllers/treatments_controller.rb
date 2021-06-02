@@ -10,7 +10,7 @@ class TreatmentsController < ApplicationController
   def create
     @treatment = Treatment.new(params[:treatment])
     @treatment.save
-    redirect_to_tracker_path(@tracker)
+    redirect_to tracker_path(@tracker)
   end
 
   private

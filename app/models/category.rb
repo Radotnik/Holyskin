@@ -1,3 +1,3 @@
 class Category < ApplicationRecord
-  belongs_to :trackers
+  has_many :trackers
 end

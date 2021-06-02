@@ -1,4 +1,4 @@
 class Tracker < ApplicationRecord
   belongs_to :treatment
-  has_many :categories
+  belongs_to :category
 end
