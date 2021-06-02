@@ -1,0 +1,13 @@
+<div>
+  <form>
+    <%= title %>
+    <input id="rangeInput" type="range" min="0" max="200" oninput="amount.value=rangeInput.value" />
+      <div>
+        Notes:
+        <textarea cols="30" id="notes" name="tracker[notes]"rows="10">text</textarea>
+      </div>
+        <%= simple_form_for(@tracker) do |f| %>
+        <%= f.input :photo, as: :file %>
+      <% end %>
+  </form>
+</div>
