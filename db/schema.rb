@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_01_125507) do
+ActiveRecord::Schema.define(version: 2021_06_02_085424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "catgeories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "group"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "tracker_id", null: false
+    t.index ["tracker_id"], name: "index_categories_on_tracker_id"
   end
 
   create_table "trackers", force: :cascade do |t|
@@ -50,10 +52,16 @@ ActiveRecord::Schema.define(version: 2021_06_01_125507) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "full_name"
+    t.integer "age"
+    t.string "gender"
+    t.string "skin_color"
+    t.string "skin_type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "trackers"
   add_foreign_key "trackers", "treatments"
   add_foreign_key "treatments", "users"
 end
