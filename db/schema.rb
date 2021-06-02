@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 2021_06_02_133620) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "catgeories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "title"
-    t.string "type"
+    t.string "group"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(version: 2021_06_02_133620) do
     t.bigint "treatment_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "category_id", null: false
+    t.string "photo"
+    t.index ["category_id"], name: "index_trackers_on_category_id"
     t.index ["treatment_id"], name: "index_trackers_on_treatment_id"
   end
 
@@ -71,17 +74,17 @@ ActiveRecord::Schema.define(version: 2021_06_02_133620) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "first_name"
-    t.string "last_name"
+    t.string "full_name"
     t.integer "age"
     t.string "gender"
-    t.string "skin_type"
     t.string "skin_color"
+    t.string "skin_type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "trackers", "categories"
   add_foreign_key "trackers", "treatments"
   add_foreign_key "treatments", "users"
 end

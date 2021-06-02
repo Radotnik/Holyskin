@@ -1,4 +1,4 @@
-class CategoryController < ApplicationController
+class CategoriesController < ApplicationController
   def index
     @categories = Category.all
   end
@@ -6,6 +6,4 @@ class CategoryController < ApplicationController
   def show
     @show = Category.find(params[:id])
   end
-
 end
-

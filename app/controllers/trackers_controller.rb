@@ -1,7 +1,7 @@
 class TrackersController < ApplicationController
   before_action :set_tracker, only: [ :show, :edit, :update, :destroy ]
   def index
-    @trackers = policy_scope(Tracker)
+    @trackers = Tracker.all
   end
 
   def show
