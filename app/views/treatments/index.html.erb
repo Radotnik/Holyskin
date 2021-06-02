@@ -1,4 +1,10 @@
-<h1>Trackers#index</h1>
-<p>Find me in app/views/trackers/index.html.erb</p>
+<h1>Treatment#index</h1>
+<p>Find me in app/views/treatment/index.html.erb</p>
 
-<%= link_to "new tracker", trackers_new_path %>
+<%  @treatments.each do |treatment| %>
+  <p> <%= treatment.skin_condition %> <p>
+<% end %>
+
+<%= link_to "Add Treatment", new_treatment_path(@treatment) %>
+<%= link_to "Dashboard", trackers_index_path %>
+<%#= link_to "New category", categories_new_path %>
