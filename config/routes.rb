@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
     resources :treatments, only: [ :index, :new, :create, :edit, :update, :destroy] do
        resources :trackers, only: [ :index, :new, :create ]
-         resources :categories, only: [ :index ]
+          resources :categories, only: [ :index ]
        end
 
       resources :trackers, only: [ :edit, :update ]

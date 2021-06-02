@@ -9,12 +9,13 @@ class TrackersController < ApplicationController
 
   def new
     @tracker = Tracker.new
+    @treatment = Treatment.find(params[:treatment_id])
   end
 
   def create
-    tracker = Tracker.new(tracker_params)
-    tracker.save
-    redirect_to tracker_path(tracker)
+    @tracker = Tracker.new(tracker_params)
+    @tracker.save
+    redirect_to tracker_path(@tracker)
   end
 
   def edit

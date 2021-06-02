@@ -6,7 +6,8 @@
         Notes:
         <textarea cols="30" id="notes" name="tracker[notes]"rows="10">text</textarea>
       </div>
-        <%= simple_form_for(@tracker) do |f| %>
+        <%= simple_form_for([@treatment, @tracker]) do |f| %>
+        <%= f.input :category, collection: Category.all %>
         <%= f.input :photo, as: :file %>
       <% end %>
   </form>
