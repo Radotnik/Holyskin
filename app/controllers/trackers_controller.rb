@@ -1,5 +1,5 @@
 class TrackersController < ApplicationController
   def index
-    @trackers = policy_scope(Tracker)
+    @trackers = Tracker.all
   end
 end
