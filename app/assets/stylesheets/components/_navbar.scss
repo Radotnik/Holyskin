@@ -3,6 +3,13 @@
   background: $primary-color;
 }
 
+.navbar-brand {
+  font-family: $headers-font;
+  font-weight: bold;
+  color: $grey-5;
+}
+
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
