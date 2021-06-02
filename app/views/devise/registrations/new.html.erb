@@ -18,14 +18,10 @@
   </div>
 
   <div class="form-inputs">
-    <%= f.input :first_name,
+    <%= f.input :full_name,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "firstname" }%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "lastname" }%>
+                input_html: { autocomplete: "fullname" }%>
     <%= f.input :age,
                 required: false,
                 autofocus: true,
