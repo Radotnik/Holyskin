@@ -1,6 +1,6 @@
 class TreatmentsController < ApplicationController
   def index
-    @treatments = policy_scope(Treatment)
+    @treatments = Treatment.all
     if params[:query].present?
     else
       puts "No treatments added"
