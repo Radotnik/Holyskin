@@ -23,7 +23,6 @@ class TreatmentsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
@@ -33,13 +32,13 @@ class TreatmentsController < ApplicationController
   def update
     @treatment = treatment_params
     @treatment.update
-    redirect_to treatment_path(@treatment)
+    redirect_to treatments_path(@treatment)
   end
 
   def destroy
     @treatment = treatment_params
     @treatment.destroy
-    redirect_to treatment_path
+    redirect_to treatments_path
   end
 
   private
