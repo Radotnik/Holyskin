@@ -18,8 +18,12 @@ class TreatmentsController < ApplicationController
   def create
     @treatment = Treatment.new(treatment_params)
     @treatment.user = current_user
-    @treatment.save
-    redirect_to treatments_path
+    if @treatment.save
+      redirect_to treatments_path
+    else
+      render :new
+    end
+
   end
 
   def edit

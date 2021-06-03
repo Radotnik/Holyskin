@@ -1,14 +1,13 @@
 <div>
-  <form>
     <%= title %>
-    <input id="rangeInput" type="range" min="0" max="200" oninput="amount.value=rangeInput.value" />
-      <div>
-        Notes:
-        <textarea cols="30" id="notes" name="tracker[notes]"rows="10">text</textarea>
-      </div>
         <%= simple_form_for([@treatment, @tracker]) do |f| %>
-        <%= f.input :category, collection: Category.all %>
-        <%= f.input :photo, as: :file %>
-      <% end %>
-  </form>
+          <input type="range" id="tracker_rating" name="tracker[rating]" min="0" max="100">
+          <%#= f.input :rating, collection: -50..50, as: :slider %>
+          <%= f.input :notes, as: :text %>
+          <%#= f.input :category, collection: Category.all %>
+          <% if params[:group] == 'skincare' or params[:group] == 'environmental'%>
+            <%= f.input :photo, as: :file %>
+          <% end %>
+          <%= f.submit 'Save' %>
+        <% end %>
 </div>
