@@ -13,12 +13,10 @@ class TreatmentsController < ApplicationController
 
   def new
     @treatment = Treatment.new
-    authorize(@treatment)
   end
 
   def create
     @treatment = Treatment.new(treatment_params)
-    authorize(@treatment)
     @treatment.user = current_user
     @treatment.save
     redirect_to treatments_path
