@@ -7,10 +7,10 @@ Rails.application.routes.draw do
     # resources :treatments, only: [ :new, :create]
 
     resources :treatments, only: [ :index, :new, :create, :edit, :update, :destroy] do
-       resources :trackers, only: [ :index, :new, :create ]
-          resources :categories, only: [ :index ]
-       end
+      resources :trackers, only: [ :index, :new, :create ]
+    end
 
       resources :trackers, only: [ :edit, :update ]
     # tracker_index == dashboard
+    #resources :categories, only: [ :index ]
 end

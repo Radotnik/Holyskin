@@ -2,9 +2,9 @@
 <p>Find me in app/views/treatment/index.html.erb</p>
 
 <%  @treatments.each do |treatment| %>
-  <p> <%= treatment.skin_condition %> <p>
+  <p> <%= treatment.skin_condition %>
+    <%= link_to "Dashboard", treatment_trackers_path(treatment) %>
+  <p>
 <% end %>
 
-<%= link_to "Add Treatment", new_treatment_path(@treatment) %>
-<%= link_to "Dashboard", trackers_index_path %>
-<%#= link_to "New category", categories_new_path %>
+<%= link_to "Add Treatment", new_treatment_path %>
