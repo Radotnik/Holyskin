@@ -1,6 +1,15 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  // display: flex;
+  justify-content: space-between !important;
   background: $primary-color;
+  box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+.navbar-brand span {
+  font-family: $body-font;
+  font-size: $size-body-l;
+  font-weight: bold;
+  color: #005f99;
 }
 
 .navbar-lewagon .navbar-collapse {
