@@ -1,7 +1,9 @@
 class TrackersController < ApplicationController
   before_action :set_tracker, only: [ :show, :edit, :update, :destroy ]
   def index
-    @trackers = Tracker.all
+    # @trackers = Tracker.all
+    start_date = params.fetch(:start_date, Date.today).to_date
+    @trackers = Tracker.where(created_at: start_date.beginning_of_week..start_date.end_of_week)
   end
 
   def show
