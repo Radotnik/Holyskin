@@ -6,10 +6,13 @@
 
   <% trackers.each do |tracker| %>
     <div class="tracker">
-      <p><%= tracker.id %></p>
+      <% if tracker.category.group == "skincare" %>
+        <p class="bg-color-blue"> </p>
+      <% elsif tracker.category.group == "environmental" %>
+        <p class="bg-color-green"> </p>
+      <% elsif tracker.category.group == "lifestyle"  %>
+        <p class="bg-color-red"> </p>
+      <% end %>
     </div>
   <% end %>
 <% end %>
-
-<!-- hash with categories as key and color icon as value -->
-<!-- tracker.category compare to key in the hash and display icon -->
