@@ -1,0 +1,25 @@
+.btn-flat {
+  color: #44403c;
+  padding: 8px 24px;
+  border-radius: 5px;
+  background: $info-color;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: $info-color;
+  color: white;
+}
+
+.btn-category {
+  border-radius: 50%;
+  background-color: $skincare;
+  color: $grey-5;
+  padding: 8px 24px;
+  cursor: pointer;
+  text-decoration: none
+}
+
+.btn-category:hover {
+  background-color: RoyalBlue;
+}
