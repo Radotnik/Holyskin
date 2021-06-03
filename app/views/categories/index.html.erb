@@ -1,3 +1,31 @@
-<% @categories.each do |category| %>
-  <%= link_to category.title.capitalize, new_treatment_tracker_path(group: category.group) %>
-<% end %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Skin care</h5>
+    <p class="card-text">
+      <% @skincare.each do |skincare| %>
+        <button class="btn-category">
+        <%= link_to skincare.title.capitalize, new_treatment_tracker_path(group: skincare.group) %>
+        </button>
+      <% end %>
+
+        <h5 class="card-title">Environmental</h5>
+          <% @environmental.each do |environmental| %>
+          <button class="btn-category">
+          <%= link_to environmental.title.capitalize, new_treatment_tracker_path(group: environmental.group) %>
+          </button>
+        <% end %>
+
+        <h5 class="card-title">Lifestyle</h5>
+          <% @lifestyle.each do |lifestyle| %>
+          <button class="btn-category">
+          <%= link_to lifestyle.title.capitalize, new_treatment_tracker_path(group: lifestyle.group) %>
+          </button>
+        <% end %>
+      </p>
+<!--     <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> -->
+  </div>
+</div>
+
+
+
