@@ -1,2 +1,15 @@
 <h1>Trackers#index</h1>
 <p>Find me in app/views/trackers/index.html.erb</p>
+
+<%= week_calendar(events: @trackers) do |date, trackers| %>
+  <%= date %>
+
+  <% trackers.each do |tracker| %>
+    <div class="tracker">
+      <p><%= tracker.id %></p>
+    </div>
+  <% end %>
+<% end %>
+
+<!-- hash with categories as key and color icon as value -->
+<!-- tracker.category compare to key in the hash and display icon -->
