@@ -1,16 +1,3 @@
-<%= link_to 'Daily skin condition', new_treatment_tracker_path %>
-
-<%= link_to 'Medication', new_treatment_tracker_path %>
-<%= link_to 'Products', new_treatment_tracker_path %>
-<%= link_to 'Supplements', new_treatment_tracker_path %>
-<%= link_to 'Treatments', new_treatment_tracker_path %>
-
-<%= link_to 'Sun', new_treatment_tracker_path %>
-<%= link_to 'Temperature', new_treatment_tracker_path %>
-<%= link_to 'Humidity', new_treatment_tracker_path %>
-<%= link_to 'Pollution', new_treatment_tracker_path %>
-
-<%= link_to 'Sleep', new_treatment_tracker_path %>
-<%= link_to 'Diet', new_treatment_tracker_path %>
-<%= link_to 'Stress', new_treatment_tracker_path %>
-<%= link_to 'Workout', new_treatment_tracker_path %>
+<% @categories.each do |category| %>
+  <%= link_to category.title.capitalize, new_treatment_tracker_path(group: category.group) %>
+<% end %>

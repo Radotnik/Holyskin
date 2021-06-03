@@ -15,7 +15,7 @@ class TrackersController < ApplicationController
   def create
     @tracker = Tracker.new(tracker_params)
     @tracker.save
-    redirect_to tracker_path(@tracker)
+    redirect_to treatment_categories_path
   end
 
   def edit
