@@ -2,7 +2,7 @@
 <p>Hello <%= current_user.full_name %></p>
 
 <%= month_calendar(events: @trackers) do |date, trackers| %>
-  <%= date %>
+  <%= date.strftime("%e") %>
 
   <% trackers.each do |tracker| %>
     <div class="tracker">
@@ -17,24 +17,28 @@
   <% end %>
 <% end %>
 
+<br>
+
 <% latest_trackers = @trackers.last(5) %>
 
 <div class="card-tracker">
   <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
   <div class="card-tracker-infos">
     <% latest_trackers.each do |tracker| %>
-    <div>
-      <h2><%= tracker.category.title %> | <%= tracker.category.group %></h2>
+      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+      <p>rating: <%= tracker.rating %></p>
       <p><%= tracker.notes%> </p>
     </div>
-    <p><%= tracker.rating %></p>
-    <h2><%= tracker.start_time %> </h2>
+    <div>
+    <p><%= tracker.start_time %> </p>
   <% end %>
   </div>
 </div>
 
+<br>
+
 <div class="card-link">
-  <%= link_to "New Tracker", treatment_categories_path %>
+  <h5> <%= link_to "+ New Tracker", treatment_categories_path %> </h5>
 </div>
 
 

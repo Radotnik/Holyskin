@@ -15,3 +15,39 @@
   .bg-color-red {
     background-color: $lifestyle;
   }
+
+  .simple-calendar {
+    font-family: $body-font !important;
+    td {
+      width: 120px !important;
+      &.future.current-month{
+        background-color: white !important;
+      }
+      &.today.current-month{
+        background-color: $info-color !important;
+      }
+      &.past.current-month{
+        background-color: $secondary-color !important;
+      }
+      &.future.next-month{
+        background-color: $grey-3 !important;
+      }
+      &.past.prev-month{
+        background-color: $grey-3 !important;
+      }
+    }
+    .calendar-heading {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        width: 75px !important;
+        text-align: right !important;
+      }
+    }
+    .calendar-title {
+      font-weight: bold !important;
+      font-size: 40 !important;
+    }
+  }
+
