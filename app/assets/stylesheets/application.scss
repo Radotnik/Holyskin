@@ -1,8 +1,7 @@
 // Graphical variables
-@import "config/main";
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
+@import "design-system/fonts";
+@import "design-system/colors";
+@import "design-system/bootstrap_variables";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -13,3 +12,10 @@
 @import "components/index";
 @import "pages/index";
 @import "simple_calendar";
+
+@import "skeleton/layout";
+
+@import "elements/forms";
+
+
+
