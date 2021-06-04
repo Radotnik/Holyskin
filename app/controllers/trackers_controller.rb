@@ -17,7 +17,8 @@ class TrackersController < ApplicationController
   def create
     @tracker = Tracker.new(tracker_params)
     @treatment = Treatment.find(params[:treatment_id])
-    @category = Category.find(params[:tracker][:category])
+    @category = Category.first
+    # (params[:tracker][:category])
     @tracker.treatment = @treatment
     @tracker.category  = @category
     @tracker.save
