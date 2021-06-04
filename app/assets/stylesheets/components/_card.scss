@@ -6,3 +6,40 @@
 .card-group {
   flex-direction: row;
 }
+
+
+.tracker-circle {
+  height: 100%;
+  width: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-tracker {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+}
+
+.card-product h2 {
+  font-family: $headers-font;
+  font-size: $size-header-2;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-family: $body-font;
+  font-size: $size-body-m;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
