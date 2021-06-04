@@ -1,4 +1,5 @@
 <h1> Add new treatment </h1>
+<p>
   <%= simple_form_for(@treatment) do |f| %>
     <%= f.input :skin_condition %>
     <%= f.input :start_date %>
@@ -6,3 +7,4 @@
     <%= f.input :status %>
     <%= f.button :submit %>
   <% end %>
+</p>

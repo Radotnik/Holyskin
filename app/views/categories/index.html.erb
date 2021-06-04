@@ -5,7 +5,7 @@
       <div class ="card-group">
         <% @skincare.each do |skincare| %>
           <button class="btn-category">
-          <%= link_to skincare.title.capitalize, new_treatment_tracker_path(group: skincare.group) %>
+          <%= link_to skincare.title.capitalize, new_treatment_tracker_path(group: skincare.group, category: skincare) %>
           </button>
         <% end %>
       </div>
@@ -13,14 +13,14 @@
         <h5 class="card-title">Environmental</h5>
           <% @environmental.each do |environmental| %>
           <button class="btn-category">
-          <%= link_to environmental.title.capitalize, new_treatment_tracker_path(group: environmental.group) %>
+          <%= link_to environmental.title.capitalize, new_treatment_tracker_path(group: environmental.group, category: environmental) %>
           </button>
         <% end %>
 
         <h5 class="card-title">Lifestyle</h5>
           <% @lifestyle.each do |lifestyle| %>
           <button class="btn-category">
-          <%= link_to lifestyle.title.capitalize, new_treatment_tracker_path(group: lifestyle.group) %>
+          <%= link_to lifestyle.title.capitalize, new_treatment_tracker_path(group: lifestyle.group, category: lifestyle) %>
           </button>
         <% end %>
      <!--  </p> -->
