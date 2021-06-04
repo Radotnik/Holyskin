@@ -16,3 +16,19 @@
     </div>
   <% end %>
 <% end %>
+
+<%= latest_trackers = @trackers.last(5) %>
+<div>
+  <% latest_trackers.each do |tracker| %>
+    <p>tracker.category.title </p>
+    <p>tracker.category.group </p>
+    <p>tracker.rating </p>
+    <p>tracker.notes </p>
+    <p>tracker.start_time </p>
+
+
+
+
+  <% end %>
+
+</div>
