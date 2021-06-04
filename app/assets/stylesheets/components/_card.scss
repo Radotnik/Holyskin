@@ -1,10 +1,14 @@
 .card-body {
-  display: flex;
   flex-direction: column;
 }
 
 .card-group {
-  flex-direction: row;
+
+  // flex-direction: row;
+}
+
+.card-title {
+   font-family: $body-font;
 }
 
 

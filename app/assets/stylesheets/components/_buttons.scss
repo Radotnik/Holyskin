@@ -1,23 +1,68 @@
-.btn-flat {
-  color: #44403c;
-  padding: 8px 24px;
-  border-radius: 5px;
-  background: $info-color;
-  transition: background 0.3s ease;
-}
+// .btn-flat {
+//   color: #44403c;
+//   padding: 8px 24px;
+//   border-radius: 5px;
+//   background: $info-color;
+//   transition: background 0.3s ease;
+// }
 
-.btn-flat:hover {
-  background: $info-color;
-  color: white;
-}
-
+// .btn-flat:hover {
+//   background: $info-color;
+//   color: white;
+// }
 .btn-category {
-  color: $grey-5;
-  padding: 8px 24px;
-  cursor: pointer;
-  text-decoration: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.btn-category:hover {
-  background-color: RoyalBlue;
+.btn-category p {
+  font-size: 10px;
+  text-align: center;
 }
+
+.btn.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:  30px;
+  height: 30px;
+  // padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.btn.btn-skincare {
+  background-color: $skincare;
+}
+
+.btn.btn-environmental {
+  background-color: $environmental;
+}
+
+.btn.btn-lifestyle {
+  background-color: $lifestyle;
+}
+
+
+// #skincare {
+//   text-decoration: none;
+//   color: $grey-5;
+// }
+
+// #environmental {
+//   text-decoration: none;
+//   color: $grey-5;
+// }
+
+// #lifestyle {
+//   text-decoration: none;
+//   color: $grey-5;
+// }
+
+
+// .btn-icon:hover {
+//   color: $primary-color;
+// }
