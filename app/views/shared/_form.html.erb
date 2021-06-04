@@ -4,7 +4,7 @@
           <input type="range" id="tracker_rating" name="tracker[rating]" min="0" max="100">
           <%#= f.input :rating, collection: -50..50, as: :slider %>
           <%= f.input :notes, as: :text %>
-          <%#= f.input :category, collection: Category.all %>
+          <%= f.hidden_field :category, value: Category.find(params[:category]).id %>
           <% if params[:group] == 'skincare' or params[:group] == 'environmental'%>
             <%= f.input :photo, as: :file %>
           <% end %>
