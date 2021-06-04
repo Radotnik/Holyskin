@@ -3,15 +3,22 @@
 <div class="card">
   <div class="card-body">
     <% @treatments.each do |treatment| %>
-        <%= link_to treatment_trackers_path(treatment), class: "card-link" do %>
-        <div>
+      <h2> <%= link_to treatment_trackers_path(treatment), class: "card-link" do %>
+       <div>
         <div class="card-treatment-info">
         <h2><%= treatment.skin_condition %></h2>
         </div>
       </div>
-        <% end  %>
     <% end %>
-  </div>
+  <% end %>
+  </h2>
+ </div>
 </div>
 
-<div class="cards-group"><%= link_to "Add New Treatment", new_treatment_path %></div>
+
+
+<div class="cards-group">
+  <button style="background-color:rgb(255, 194, 71)">
+   <h3><%= link_to "New Treatment", new_treatment_path %></h3>
+  </button>
+</div>

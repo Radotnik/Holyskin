@@ -10,3 +10,41 @@
 .card-title {
    font-family: $body-font;
 }
+
+
+.tracker-circle {
+  width: 120px;
+  height: 100%;
+  border-radius: 50%;
+
+}
+
+.card-tracker {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.card-tracker h2 {
+  font-family: $headers-font;
+  font-size: $size-header-2;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-tracker p {
+  font-family: $body-font;
+  font-size: $size-body-m;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-tracker .card-tracker-infos {
+  padding: 16px;
+}
