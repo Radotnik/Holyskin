@@ -1,13 +1,15 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Skin care</h5>
-    <!-- <p class="card-text"> -->
       <div class ="card-group">
-        <% @skincare.each do |skincare| %>
-          <button class="btn-category">
-          <%= link_to skincare.title.capitalize, new_treatment_tracker_path(group: skincare.group) %>
-          </button>
-        <% end %>
+        <h5 class="card-title">Skin care</h5>
+          <div class="btn-icon">
+          <% @skincare.each do |skincare| %>
+
+            <div id="btn-icon medication">
+              <%= link_to skincare.title.capitalize, new_treatment_tracker_path(group: skincare.group) %>
+            </div>
+          <% end %>
+        </div>
       </div>
 
         <h5 class="card-title">Environmental</h5>
@@ -23,9 +25,8 @@
           <%= link_to lifestyle.title.capitalize, new_treatment_tracker_path(group: lifestyle.group) %>
           </button>
         <% end %>
-     <!--  </p> -->
-<!--     <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a> -->
+
+
   </div>
 </div>
 
