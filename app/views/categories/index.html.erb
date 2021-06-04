@@ -1,31 +1,38 @@
-<div class="card" style="width: 18rem;">
+<div class="card d-flex align-content-center" style="width: 18rem;">
   <div class="card-body">
-<<<<<<< HEAD
 
         <h5 class="card-title">Skin care</h5>
-          <% @skincare.each do |skincare| %>
-            <button class="btn-icon" id="i">
-              <div class="btn-align">
-                <%= link_to skincare.title.capitalize, new_treatment_tracker_path(group: skincare.group), id: "skincare" %>
+          <div class="card-group d-flex justify-content-between">
+            <% @skincare.each do |skincare| %>
+              <div class="btn-category">
+                <%= link_to new_treatment_tracker_path(group: skincare.group), class: "btn btn-icon btn-skincare" do %>
+                <i class="fas fa-pills"></i><% end %>
+                <p><%= skincare.title.capitalize %></p>
               </div>
-            </button>
-          <% end %>
+            <% end %>
+          </div>
 
         <h5 class="card-title">Environmental</h5>
-          <% @environmental.each do |environmental| %>
-          <button class="btn-icon" id="e">
-            <div class="btn-align">
-              <%= link_to environmental.title.capitalize, new_treatment_tracker_path(group: environmental.group), id: "environmental" %>
+          <div class="card-group d-flex justify-content-between">
+            <% @environmental.each do |environmental| %>
+              <div class="btn-category">
+              <%= link_to new_treatment_tracker_path(group: environmental.group), class: "btn btn-icon btn-environmental" do %>
+              <i class="far fa-sun"></i><% end %>
+              <p><%= environmental.title.capitalize %></p>
             </div>
-          </button>
-        <% end %>
+          <% end %>
+        </div>
 
-        <h5 class="card-title">Lifestyle</h5>
-          <% @lifestyle.each do |lifestyle| %>
-          <button class="btn-icon" id="l">
-            <%= link_to lifestyle.title.capitalize, new_treatment_tracker_path(group: lifestyle.group), id: "lifestyle" %>
-          </button>
-        <% end %>
+          <h5 class="card-title">Lifestyle</h5>
+            <div class="card-group d-flex justify-content-between">
+              <% @lifestyle.each do |lifestyle| %>
+                <div class="btn-category">
+                <%= link_to new_treatment_tracker_path(group: lifestyle.group), class: "btn btn-icon btn-lifestyle" do %>
+                <i class="fas fa-running"></i><% end %>
+                <p><%= lifestyle.title.capitalize %></p>
+              </div>
+            <% end %>
+          </div>
 
   </div>
 </div>
