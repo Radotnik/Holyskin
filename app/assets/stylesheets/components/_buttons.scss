@@ -38,6 +38,30 @@
   background-color: $skincare;
 }
 
+#medications #prdoucts {
+  background-color: $skincare;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:  30px;
+  height: 30px;
+  // padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+// #supplements{
+
+// }
+
+// #treatments{
+
+// }
+
+
+
 .btn.btn-environmental {
   background-color: $environmental;
 }

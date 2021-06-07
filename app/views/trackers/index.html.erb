@@ -18,19 +18,54 @@
     <% end %>
   <% end %>
 
-
 <br>
 
 <% latest_trackers = @trackers.last(5) %>
 
 <% latest_trackers.each do |tracker| %>
   <div class="card-tracker">
-    <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-tracker-infos">
-        <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-        <p>rating: <%= tracker.rating %></p>
-        <p><%= tracker.notes%> </p>
-      </div>
+<!--     <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+ -->
+    <div class="card-tracker-infos">
+      <% if tracker.category.group == "skincare" %>
+        <div class="btn btn-icon btn-skincare">
+          <% if tracker.category.title == "medications" %>
+            <i class="fas fa-prescription-bottle-alt"></i>
+          <% elsif tracker.category.title == "products" %>
+            <i class="fas fa-prescription-bottle"></i>
+          <% elsif tracker.category.title == "supplements" %>
+            <i class="fas fa-pills"></i>
+          <% elsif tracker.category.title == "treatments" %>
+            <i class="fas fa-user-md"></i>
+          <% end %>
+        </div>
+
+      <% elsif tracker.category.group == "environmental" %>
+        <div class="btn btn-icon btn-environmental">
+          <% if tracker.category.title == "sun" %>
+            <i class="fas fa-prescription-bottle-alt"></i>
+          <% elsif tracker.category.title == "humidity" %>
+            <i class="fas fa-prescription-bottle"></i>
+          <% elsif tracker.category.title == "temperature" %>
+            <i class="fas fa-pills"></i>
+          <% elsif tracker.category.title == "pollution" %>
+            <i class="fas fa-user-md"></i>
+          <% end %>
+        </div>
+
+
+
+
+
+      <% elsif tracker.category.group == "lifestyle" %>
+        <div class="btn btn-lifestyle"> </div>
+      <% end %>
+
+
+      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+      <p>rating: <%= tracker.rating %></p>
+      <p><%= tracker.notes%> </p>
+    </div>
 
     <div>
       <p><%= tracker.start_time %> </p>
