@@ -26,7 +26,7 @@ treatment.save!
 Category.new(group: 'skincare', title: 'medications').save!
 Category.new(group: 'skincare', title: 'products').save!
 Category.new(group: 'skincare', title: 'supplements').save!
-Category.new(group: 'skincare', title: 'treatments').save!
+Category.new(group: 'skincare', title: 'progress').save!
 
 Category.new(group: 'environmental', title: 'sun').save!
 Category.new(group: 'environmental', title: 'humidity').save!
