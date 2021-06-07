@@ -12,15 +12,13 @@ class TrackersController < ApplicationController
   def new
     @tracker = Tracker.new
     @treatment = Treatment.find(params[:treatment_id])
+    @category = Category.find(params[:category_id])
   end
 
   def create
     @tracker = Tracker.new(tracker_params)
     @treatment = Treatment.find(params[:treatment_id])
-    @category = Category.first
-    # (params[:tracker][:category])
     @tracker.treatment = @treatment
-    @tracker.category  = @category
     @tracker.save
     redirect_to treatment_categories_path
   end
@@ -41,7 +39,7 @@ class TrackersController < ApplicationController
   private
 
   def tracker_params
-    params.require(:tracker).permit(:rating, :notes, :photo)
+    params.require(:tracker).permit(:rating, :notes, :photo, :category_id)
   end
 
   def set_tracker
