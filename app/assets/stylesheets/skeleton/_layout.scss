@@ -5,9 +5,9 @@
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  // padding-bottom: 2.5rem;    /* Footer height */
   overflow:auto;
-  padding-bottom:150px;
+  padding-bottom: 150px;
 }
 
 #yield-wrap {
@@ -15,5 +15,16 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  // margin: 60px;
+  margin: 60px;
+}
+
+h1 {
+  color: $header-color;
+  font-family: $body-font;
+  font-weight: bold;
+}
+
+h2 {
+  color: $grey-2;
+  font-family: $body-font;
 }

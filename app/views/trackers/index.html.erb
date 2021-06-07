@@ -1,5 +1,5 @@
 <h1>Your Dashboard</h1>
-<p>Hello <%= current_user.full_name %></p>
+<h2>Hello <%= current_user.full_name %>!</h2>
 
 
   <%= month_calendar(events: @trackers) do |date, trackers| %>
@@ -24,8 +24,6 @@
 
 <% latest_trackers.each do |tracker| %>
   <div class="card-tracker">
-<!--     <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
- -->
     <div class="card-tracker-infos">
 
       <div class="card-tracker-icon">
