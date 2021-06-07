@@ -18,22 +18,27 @@
 
   .simple-calendar {
     font-family: $body-font !important;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
     td {
       width: 120px !important;
       &.future.current-month{
         background-color: white !important;
       }
       &.today.current-month{
-        background-color: $info-color !important;
+        background-color: white !important;
       }
       &.past.current-month{
-        background-color: $secondary-color !important;
+        background-color: white !important;
       }
       &.future.next-month{
-        background-color: $grey-3 !important;
+        background-color: white !important;
       }
       &.past.prev-month{
-        background-color: $grey-3 !important;
+        background-color: white !important;
       }
     }
 

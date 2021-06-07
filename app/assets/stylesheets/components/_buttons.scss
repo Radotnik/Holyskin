@@ -47,6 +47,18 @@
   background-color: $lifestyle;
 }
 
+#save-button{
+  margin-top: 30px;
+  background-color: #FFC65A;
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#save-button:hover {
+  box-shadow: 0 0 2px;
+  -webkit-transition: .2s;
+}
 // #medications #prdoucts #supplements #treatments {
 //   background-color: $skincare;
 //   display: flex;
