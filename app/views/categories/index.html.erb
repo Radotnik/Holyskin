@@ -6,7 +6,16 @@
             <% @skincare.each do |skincare| %>
               <div class="btn-category">
                 <%= link_to new_treatment_tracker_path(group: skincare.group, category_id: skincare.id), class: "btn btn-icon btn-skincare" do %>
-                <i class="fas fa-pills"></i><% end %>
+                  <% if skincare.title == "medications" %>
+                    <i class="fas fa-prescription-bottle-alt"></i>
+                  <% elsif skincare.title == "products" %>
+                    <i class="fas fa-prescription-bottle"></i>
+                  <% elsif skincare.title == "supplements" %>
+                    <i class="fas fa-pills"></i>
+                  <% elsif skincare.title == "treatments" %>
+                    <i class="fas fa-user-md"></i>
+                  <% end %>
+                <% end %>
                 <p><%= skincare.title.capitalize %></p>
               </div>
             <% end %>
@@ -16,8 +25,17 @@
           <div class="card-group d-flex justify-content-between">
             <% @environmental.each do |environmental| %>
               <div class="btn-category">
-              <%= link_to new_treatment_tracker_path(group: environmental.group, category_id: environmental.id), class: "btn btn-icon btn-environmental" do %>
-              <i class="far fa-sun"></i><% end %>
+                <%= link_to new_treatment_tracker_path(group: environmental.group, category_id: environmental.id), class: "btn btn-icon btn-environmental" do %>
+                  <% if environmental.title == "sun" %>
+                    <i class="far fa-sun"></i>
+                  <% elsif environmental.title == "humidity" %>
+                    <i class="fas fa-water"></i>
+                  <% elsif environmental.title == "temperature" %>
+                    <i class="fas fa-temperature-high"></i>
+                  <% elsif environmental.title == "pollution" %>
+                    <i class="fas fa-smog"></i>
+                  <% end %>
+                <% end %>
               <p><%= environmental.title.capitalize %></p>
             </div>
           <% end %>
@@ -27,8 +45,17 @@
             <div class="card-group d-flex justify-content-between">
               <% @lifestyle.each do |lifestyle| %>
                 <div class="btn-category">
-                <%= link_to new_treatment_tracker_path(group: lifestyle.group, category_id: lifestyle.id), class: "btn btn-icon btn-lifestyle" do %>
-                <i class="fas fa-running"></i><% end %>
+                  <%= link_to new_treatment_tracker_path(group: lifestyle.group, category_id: lifestyle.id), class: "btn btn-icon btn-lifestyle" do %>
+                    <% if lifestyle.title == "sleep" %>
+                      <i class="fas fa-bed"></i>
+                    <% elsif lifestyle.title == "stress" %>
+                      <i class="fas fa-sad-cry"></i>
+                    <% elsif lifestyle.title == "workout" %>
+                      <i class="fas fa-running"></i>
+                    <% elsif lifestyle.title == "diet" %>
+                      <i class="fas fa-hamburger"></i>
+                    <% end %>
+                  <% end %>
                 <p><%= lifestyle.title.capitalize %></p>
               </div>
             <% end %>
