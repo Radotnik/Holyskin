@@ -9,6 +9,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @show = Category.find(params[:id])
+    @category = Category.find(params[:id])
+    @treatment = Treatment.find(params[:treatment_id])
+    @trackers = Tracker.where(category: @category, treatment: @treatment)
   end
 end

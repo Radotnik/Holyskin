@@ -1,0 +1,30 @@
+<!-- app/views/articles/show.html.erb -->
+<% #= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<div>
+  <h1><%= @category.title %></h1>
+</div>
+<div>
+  <span><%= "You haven’t uploaded any progress trackers with pictures yet!" if @trackers.empty? %></span>
+  <div>
+    <%= link_to "New progress tracker", new_treatment_tracker_path({
+      treatment_id: @treatment.id,
+      category_id: @category.id,
+      group: @category.group
+    }) %>
+  </div>
+</div>
+<div class=“card-tracker-infos-details”>
+  <% @trackers.each do |tracker| %>
+    <div>
+      <% if tracker.photo.attached? %>
+        <%#= cl_image_tag tracker.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+    </div>
+    <div>
+      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+      <p>rating: <%= tracker.rating %></p>
+      <p><%= tracker.notes%> </p>
+    </div>
+  <% end %>
+</div>
+</div>
