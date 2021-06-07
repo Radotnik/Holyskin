@@ -12,6 +12,7 @@ Category.destroy_all
 Tracker.destroy_all
 Treatment.destroy_all
 User.destroy_all
+require "open-uri"
 
 puts "DB cleaned"
 puts "Creating database..."
@@ -22,16 +23,6 @@ user.save!
 treatment = Treatment.new(user_id: user.id, skin_condition: 'eczema', start_date: '01.06.2021', end_date: '31.12.2021', status: 'start')
 treatment.save!
 
-# titles = ['sleep', 'stress', 'workout', 'diet', 'sun', 'humidity', 'temperature', 'pollution', 'medication', 'products', 'supplements', 'treatments']
-# groups = ['skincare', 'environmental', 'lifestyle']
-
-# category = {
-#   skincare: ['medications', 'products', 'supplements', 'treatments']
-#   environmental: ['sun', 'humidity', 'temperature', 'pollution']
-#   lifestyle: ['sleep', 'stress', 'workout', 'diet']
-# }
-
-# Category.create!(group: 'skincare', title: 'medications')
 Category.new(group: 'skincare', title: 'medications').save!
 Category.new(group: 'skincare', title: 'products').save!
 Category.new(group: 'skincare', title: 'supplements').save!
@@ -47,22 +38,29 @@ Category.new(group: 'lifestyle', title: 'stress').save!
 Category.new(group: 'lifestyle', title: 'workout').save!
 Category.new(group: 'lifestyle', title: 'diet').save!
 
-# category.each_with_index do |(key, value), index|
-#   title: value
-#   group: key
-# end
 
-
-# 4.times do
-#   category = Category.new(
-#     title: titles.sample,
-#     group: skincare
-#     )
-#   category.save!
-# end
-
+file = URI.open('https://images.unsplash.com/photo-1595514446083-236b9985a0e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
 tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'seeing progress')
-  # , photo: 'https://images.unsplash.com/photo-1595514446083-236b9985a0e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
+tracker.photo.attach(io: file, filename: 'happy_skin.png', content_type: 'image/png')
 tracker.save!
+
+
+file = URI.open('https://unsplash.com/photos/tWTFjznQlBA')
+tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '2', notes: 'It looks like this today')
+tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
+tracker.save!
+
+
+file = URI.open('https://unsplash.com/photos/S-NrwbUgNrU')
+tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'I think there is a slight improvement')
+tracker.photo.attach(io: file, filename: 'eczema_skin2.png', content_type: 'image/png')
+tracker.save!
+
+
+file = URI.open('https://unsplash.com/photos/tWTFjznQlBA')
+tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'Feeling confident :)')
+tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
+tracker.save!
+
 
 puts 'Seeds created!'
