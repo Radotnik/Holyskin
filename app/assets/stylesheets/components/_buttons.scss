@@ -10,6 +10,7 @@
 //   background: $info-color;
 //   color: white;
 // }
+
 .btn-category {
   margin: 0 auto;
   display: flex;
@@ -38,30 +39,6 @@
   background-color: $skincare;
 }
 
-#medications #prdoucts {
-  background-color: $skincare;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width:  30px;
-  height: 30px;
-  // padding: 8px 24px;
-  cursor: pointer;
-  border-radius: 50%;
-  text-align: center;
-}
-
-
-// #supplements{
-
-// }
-
-// #treatments{
-
-// }
-
-
-
 .btn.btn-environmental {
   background-color: $environmental;
 }
@@ -70,20 +47,17 @@
   background-color: $lifestyle;
 }
 
-
-// #skincare {
-//   text-decoration: none;
-//   color: $grey-5;
-// }
-
-// #environmental {
-//   text-decoration: none;
-//   color: $grey-5;
-// }
-
-// #lifestyle {
-//   text-decoration: none;
-//   color: $grey-5;
+// #medications #prdoucts #supplements #treatments {
+//   background-color: $skincare;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width:  30px;
+//   height: 30px;
+//   // padding: 8px 24px;
+//   cursor: pointer;
+//   border-radius: 50%;
+//   text-align: center;
 // }
 
 

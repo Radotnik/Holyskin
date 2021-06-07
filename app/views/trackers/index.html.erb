@@ -27,8 +27,10 @@
 <!--     <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
  -->
     <div class="card-tracker-infos">
+
+      <div class="card-tracker-icon">
       <% if tracker.category.group == "skincare" %>
-        <div class="btn btn-icon btn-skincare">
+        <div class="btn btn-icon btn-skincare" style="height: 75px; width: 75px;">
           <% if tracker.category.title == "medications" %>
             <i class="fas fa-prescription-bottle-alt"></i>
           <% elsif tracker.category.title == "products" %>
@@ -43,28 +45,37 @@
       <% elsif tracker.category.group == "environmental" %>
         <div class="btn btn-icon btn-environmental">
           <% if tracker.category.title == "sun" %>
-            <i class="fas fa-prescription-bottle-alt"></i>
+            <i class="far fa-sun"></i>
           <% elsif tracker.category.title == "humidity" %>
-            <i class="fas fa-prescription-bottle"></i>
+            <i class="fas fa-humidity"></i>
           <% elsif tracker.category.title == "temperature" %>
-            <i class="fas fa-pills"></i>
+            <i class="fas fa-temperature-high"></i>
           <% elsif tracker.category.title == "pollution" %>
-            <i class="fas fa-user-md"></i>
+            <i class="fas fa-sun-dust"></i>
           <% end %>
         </div>
 
-
-
-
-
       <% elsif tracker.category.group == "lifestyle" %>
-        <div class="btn btn-lifestyle"> </div>
+        <div class="btn btn-lifestyle">
+          <% if tracker.category.title == "sun" %>
+            <i class="far fa-sun"></i>
+          <% elsif tracker.category.title == "humidity" %>
+            <i class="fas fa-humidity"></i>
+          <% elsif tracker.category.title == "temperature" %>
+            <i class="fas fa-temperature-high"></i>
+          <% elsif tracker.category.title == "pollution" %>
+            <i class="fas fa-sun-dust"></i>
+          <% end %>
+        </div>
+
       <% end %>
+    </div>
 
-
-      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-      <p>rating: <%= tracker.rating %></p>
-      <p><%= tracker.notes%> </p>
+      <div class="card-tracker-infos-details">
+        <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+        <p>rating: <%= tracker.rating %></p>
+        <p><%= tracker.notes%> </p>
+      </div>
     </div>
 
     <div>
@@ -75,7 +86,7 @@
 
 
 <div class="card-link">
-  <h5> <%= link_to "+ New Tracker", treatment_categories_path %> </h5>
+  <h5> <%= link_to "New Entry", treatment_categories_path %> </h5>
 </div>
 
 
