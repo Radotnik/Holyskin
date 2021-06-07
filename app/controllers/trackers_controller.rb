@@ -21,7 +21,7 @@ class TrackersController < ApplicationController
     # (params[:tracker][:category])
     @tracker.treatment = @treatment
     @tracker.category  = @category
-    @tracker.save
+    @tracker.save!
     redirect_to treatment_categories_path
   end
 
