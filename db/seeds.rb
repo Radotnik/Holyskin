@@ -46,19 +46,19 @@ tracker.save!
 
 
 file = URI.open('https://unsplash.com/photos/tWTFjznQlBA')
-tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '2', notes: 'It looks like this today')
+tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '2', notes: 'It looks like this today')
 tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
 tracker.save!
 
 
 file = URI.open('https://unsplash.com/photos/S-NrwbUgNrU')
-tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'I think there is a slight improvement')
+tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'I think there is a slight improvement')
 tracker.photo.attach(io: file, filename: 'eczema_skin2.png', content_type: 'image/png')
 tracker.save!
 
 
 file = URI.open('https://unsplash.com/photos/tWTFjznQlBA')
-tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'Feeling confident :)')
+tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'Feeling confident :)')
 tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
 tracker.save!
 

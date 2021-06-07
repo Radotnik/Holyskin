@@ -5,7 +5,7 @@ class Category < ApplicationRecord
   # validates :group, presence: true, inclusion: { in: ['skincare', 'environmental', 'lifestyle']}
 
   CATEGORY = {
-  skincare: ['medications', 'products', 'supplements', 'treatments'],
+  skincare: ['medications', 'products', 'supplements', 'progress'],
   environmental: ['sun', 'humidity', 'temperature', 'pollution'],
   lifestyle: ['sleep', 'stress', 'workout', 'diet']
   }
