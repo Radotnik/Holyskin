@@ -1,41 +1,43 @@
 <h1>Your Dashboard</h1>
 <p>Hello <%= current_user.full_name %></p>
 
-<%= month_calendar(events: @trackers) do |date, trackers| %>
-  <%= date.strftime("%e") %>
 
-  <% trackers.each do |tracker| %>
-    <div class="tracker">
-      <% if tracker.category.group == "skincare" %>
-        <p class="bg-color-blue"> </p>
-      <% elsif tracker.category.group == "environmental" %>
-        <p class="bg-color-green"> </p>
-      <% elsif tracker.category.group == "lifestyle"  %>
-        <p class="bg-color-red"> </p>
-      <% end %>
-    </div>
+  <%= month_calendar(events: @trackers) do |date, trackers| %>
+    <%= date.strftime("%e") %>
+
+    <% trackers.each do |tracker| %>
+      <div class="tracker">
+        <% if tracker.category.group == "skincare" %>
+          <p class="bg-color-blue"> </p>
+        <% elsif tracker.category.group == "environmental" %>
+          <p class="bg-color-green"> </p>
+        <% elsif tracker.category.group == "lifestyle"  %>
+          <p class="bg-color-red"> </p>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+
 
 <br>
 
 <% latest_trackers = @trackers.last(5) %>
 
-<div class="card-tracker">
-  <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-tracker-infos">
-    <% latest_trackers.each do |tracker| %>
-      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-      <p>rating: <%= tracker.rating %></p>
-      <p><%= tracker.notes%> </p>
-    </div>
-    <div>
-    <p><%= tracker.start_time %> </p>
-  <% end %>
-  </div>
-</div>
+<% latest_trackers.each do |tracker| %>
+  <div class="card-tracker">
+    <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-tracker-infos">
+        <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+        <p>rating: <%= tracker.rating %></p>
+        <p><%= tracker.notes%> </p>
+      </div>
 
-<br>
+    <div>
+      <p><%= tracker.start_time %> </p>
+    </div>
+  </div>
+<% end %>
+
 
 <div class="card-link">
   <h5> <%= link_to "+ New Tracker", treatment_categories_path %> </h5>
