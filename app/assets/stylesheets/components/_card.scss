@@ -75,6 +75,9 @@
   color: $grey-1;
   font-family: $headers-font;
   font-size: $size-header-1;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
 }
 
 .all-cards-treatment {
@@ -84,36 +87,41 @@
   margin: 40px 0;
 }
 
-.card-treatment {
-
-}
-
-.all-cards-treatment-info {
-  text-decoration: none;
-  border-style: outset;
+.card-treatment-info {
   font-size: $size-body-m;
   font-family: "Comfortaa", "cursive";
   color: $grey-2;
   display: flex;
+  background: white;
+  box-shadow: 0 0 15px $grey-2;
+  border-radius: 18px;
+  position: relative;
+  padding: 15px;
+}
+
+.card-treatment-info h2 {
+  padding: 20px;
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 18px;
-  position: relative;
 }
 
-
 .card-add-treatment {
+  font-size: $size-body-m;
+  font-family: "Comfortaa", "cursive";
+  color: $grey-2;
+  display: flex;
+  box-shadow: 0 0 15px $grey-2;
+  border-radius: 18px;
+  position: relative;
+  padding: 5px;
   flex-direction: row;
-  background-color: $info-color;
+  background: $info-color;
 }
 
 .card-add-treatment h3 {
   color: $grey-2;
   padding: 10px;
-
 }
 
 
