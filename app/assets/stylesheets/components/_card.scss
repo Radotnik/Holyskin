@@ -50,3 +50,55 @@
 .card-tracker .card-tracker-infos {
   padding: 16px;
 }
+
+
+.treatment-header h1 {
+  color: $grey-1;
+  font-family: $headers-font;
+  font-size: $size-header-1;
+}
+
+.all-cards-treatment {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin: 40px 0;
+}
+
+.card-treatment {
+
+}
+
+.all-cards-treatment-info {
+  text-decoration: none;
+  border-style: outset;
+  font-size: $size-body-m;
+  font-family: "Comfortaa", "cursive";
+  color: $grey-2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 18px;
+  position: relative;
+
+}
+
+
+
+
+.card-add-treatment {
+  flex-direction: row;
+  background-color: $info-color;
+}
+
+.card-add-treatment h3 {
+  color: $grey-2;
+  padding: 10px;
+
+}
+
+
