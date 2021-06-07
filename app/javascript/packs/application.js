@@ -24,11 +24,13 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import {disable} from "../components/disable_end_date.js";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
+  disable()
   // Call your functions here, e.g:
   // initSelect2();
 });

@@ -4,7 +4,6 @@ class Treatment < ApplicationRecord
 
   validates :skin_condition, presence: true, inclusion: { in: ['eczema', 'rash', 'acne', 'psoriasis'] }
   validates :start_date, presence: true
-  validates :end_date, presence: true
   validates :status, presence: true, inclusion: { in: ['start', 'in progress', 'end'] }
 end
 
