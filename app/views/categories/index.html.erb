@@ -16,7 +16,7 @@
           <div class="card-group d-flex justify-content-between">
             <% @environmental.each do |environmental| %>
               <div class="btn-category">
-              <%= link_to new_treatment_tracker_path(group: environmental.group), class: "btn btn-icon btn-environmental" do %>
+              <%= link_to new_treatment_tracker_path(group: environmental.group, category_id: environmental.id), class: "btn btn-icon btn-environmental" do %>
               <i class="far fa-sun"></i><% end %>
               <p><%= environmental.title.capitalize %></p>
             </div>
@@ -27,7 +27,7 @@
             <div class="card-group d-flex justify-content-between">
               <% @lifestyle.each do |lifestyle| %>
                 <div class="btn-category">
-                <%= link_to new_treatment_tracker_path(group: lifestyle.group), class: "btn btn-icon btn-lifestyle" do %>
+                <%= link_to new_treatment_tracker_path(group: lifestyle.group, category_id: lifestyle.id), class: "btn btn-icon btn-lifestyle" do %>
                 <i class="fas fa-running"></i><% end %>
                 <p><%= lifestyle.title.capitalize %></p>
               </div>
