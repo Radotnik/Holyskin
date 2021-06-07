@@ -1,17 +1,18 @@
 <div class="form">
+    <%= simple_form_for([@treatment, @tracker]) do |f| %>
     <div class="title">
       <%= title %>
-      <%= simple_form_for([@treatment, @tracker]) do |f| %>
       <input class="slider" type="range" id="tracker_rating" name="tracker[rating]" min="0" value="50" max="100">
     </div>
+    <%= f.hidden_field :category_id, value: @category.id %>
     <div class="notes">
       <%#= f.input :rating, collection: -50..50, as: :slider %>
       <%= f.input :notes, as: :text %>
     </div>
     <div class="photo">
-      <%#= f.input :category, collection: Category.all %>
+       <%#= f.input :category, collection: Category.all %>
       <% if params[:group] == 'skincare' or params[:group] == 'environmental'%>
-      <%= f.input :photo, as: :file %>
+        <%= f.input :photo, as: :file %>
       <% end %>
     </div>
     <div class="save">
