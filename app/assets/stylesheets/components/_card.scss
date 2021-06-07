@@ -2,11 +2,6 @@
   flex-direction: column;
 }
 
-.card-group {
-
-  // flex-direction: row;
-}
-
 .card-title {
    font-family: $body-font;
 }
@@ -17,16 +12,11 @@
   border-radius: 50%;
 }
 
-// .card-tracker-all {
-//   display: flex;
-
-// }
-
 .card-tracker {
   overflow: hidden;
   height: 150px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   margin: 20px;
   padding-right: 30px;
@@ -94,12 +84,12 @@
 }
 
 .card-treatment-info {
-  font-size: $size-body-m;
-  font-family: "Comfortaa", "cursive";
+  // font-size: $size-body-m;
+  // font-family: "Comfortaa", "cursive";
   color: $grey-2;
   display: flex;
   background: white;
-  box-shadow: 0 0 15px $grey-2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 18px;
   position: relative;
   padding: 15px;
@@ -117,7 +107,7 @@
   font-family: "Comfortaa", "cursive";
   color: $grey-2;
   display: flex;
-  box-shadow: 0 0 15px $grey-2;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 18px;
   position: relative;
   padding: 5px;
