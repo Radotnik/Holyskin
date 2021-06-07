@@ -41,7 +41,7 @@
         </div>
 
       <% elsif tracker.category.group == "environmental" %>
-        <div class="btn btn-icon btn-environmental">
+        <div class="btn btn-icon btn-environmental" style="height: 75px; width: 75px;">
           <% if tracker.category.title == "sun" %>
             <i class="far fa-sun"></i>
           <% elsif tracker.category.title == "humidity" %>
@@ -54,15 +54,15 @@
         </div>
 
       <% elsif tracker.category.group == "lifestyle" %>
-        <div class="btn btn-lifestyle">
-          <% if tracker.category.title == "sun" %>
-            <i class="far fa-sun"></i>
-          <% elsif tracker.category.title == "humidity" %>
-            <i class="fas fa-humidity"></i>
-          <% elsif tracker.category.title == "temperature" %>
-            <i class="fas fa-temperature-high"></i>
-          <% elsif tracker.category.title == "pollution" %>
-            <i class="fas fa-sun-dust"></i>
+        <div class="btn btn-lifestyle" style="height: 75px; width: 75px;">
+          <% if tracker.category.title == "sleep" %>
+            <i class="fas fa-bed"></i>
+          <% elsif tracker.category.title == "stress" %>
+            <i class="fas fa-sad-cry"></i>
+          <% elsif tracker.category.title == "workout" %>
+            <i class="fas fa-running"></i>
+          <% elsif tracker.category.title == "diet" %>
+            <i class="fas fa-hamburger"></i>
           <% end %>
         </div>
 
