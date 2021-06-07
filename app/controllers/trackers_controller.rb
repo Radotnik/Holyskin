@@ -4,6 +4,8 @@ class TrackersController < ApplicationController
     # @trackers = Tracker.all
     start_date = params.fetch(:start_date, Date.today).to_date
     @trackers = Tracker.where(created_at: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @progress_category_id = Category.find_by_title("treatments").id
+    @treatment = Treatment.find(params[:treatment_id])
   end
 
   def show
