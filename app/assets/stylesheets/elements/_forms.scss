@@ -1,11 +1,14 @@
 .form{
+  display: flex;
   position: relative;
-  margin-top: 100px;
+  // margin-top: 90px;
   border: 3px solid #BBDEFB;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 7px;
   padding: 20px;
-  height: 400px;
+  // height: 500px;
+  // width: 75%;
 }
 
 .slider{
@@ -43,13 +46,20 @@
 }
 
 .photo{
-  margin-bottom: 55px;
+
   font-family: "Work Sans", "Comfortaa", "cursive";
 }
 
 .save{
   text-align: center;
   font-family: "Work Sans", "Comfortaa", "cursive";
+
 }
+
+.notes textarea{
+  height: 263px;
+}
+
+
 
 

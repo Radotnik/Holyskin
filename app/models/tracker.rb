@@ -3,7 +3,7 @@ class Tracker < ApplicationRecord
   has_one_attached :photo
   belongs_to :category
 
-  validates :rating, presence: true, numericality: { in: 0..10 }
+  validates :rating, presence: true, numericality: { in: 0..100 }
   validates :notes, presence: true
 
 

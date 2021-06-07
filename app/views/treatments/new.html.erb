@@ -3,6 +3,9 @@
   <%= simple_form_for(@treatment) do |f| %>
     <%= f.input :skin_condition %>
     <%= f.input :start_date %>
+    <%#= f.input :diable_end_date, label: false do %>
+     <%= label_tag "ongoing" %>
+      <%= check_box_tag :disable_end_date %>
     <%= f.input :end_date %>
     <%= f.input :status %>
     <%= f.button :submit %>

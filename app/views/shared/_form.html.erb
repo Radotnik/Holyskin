@@ -1,22 +1,22 @@
 <div class="form">
+    <%= simple_form_for([@treatment, @tracker]) do |f| %>
     <div class="title">
       <%= title %>
       <input class="slider" type="range" id="tracker_rating" name="tracker[rating]" min="0" value="50" max="100">
     </div>
-    <%= simple_form_for([@treatment, @tracker]) do |f| %>
     <%= f.hidden_field :category_id, value: @category.id %>
     <div class="notes">
       <%#= f.input :rating, collection: -50..50, as: :slider %>
-      <%= f.input :notes, as: :text %>
+      <%= f.input :notes, as: :text, input_html: { class: "nice-class" } %>
     </div>
     <div class="photo">
        <%#= f.input :category, collection: Category.all %>
       <% if params[:group] == 'skincare' or params[:group] == 'environmental'%>
-        <%= f.input :photo, as: :file %>
+        <%= f.input :photo, as: :file, input_html: { class: 'd-none'}, label_html: { class: ''}, label: '<i class="fas fa-camera"></i>'.html_safe %>
       <% end %>
     </div>
     <div class="save">
-      <%= f.submit 'Save' %>
+      <%= f.submit 'Save', id: 'save-button' %>
       <% end %>
     </div>
 </div>

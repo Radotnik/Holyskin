@@ -1,44 +1,90 @@
 <h1>Your Dashboard</h1>
-<p>Hello <%= current_user.full_name %></p>
+<h2>Hello <%= current_user.full_name %>!</h2>
 
-<%= month_calendar(events: @trackers) do |date, trackers| %>
-  <%= date.strftime("%e") %>
 
-  <% trackers.each do |tracker| %>
-    <div class="tracker">
-      <% if tracker.category.group == "skincare" %>
-        <p class="bg-color-blue"> </p>
-      <% elsif tracker.category.group == "environmental" %>
-        <p class="bg-color-green"> </p>
-      <% elsif tracker.category.group == "lifestyle"  %>
-        <p class="bg-color-red"> </p>
-      <% end %>
-    </div>
+  <%= month_calendar(events: @trackers) do |date, trackers| %>
+    <%= date.strftime("%e") %>
+
+    <% trackers.each do |tracker| %>
+      <div class="tracker">
+        <% if tracker.category.group == "skincare" %>
+          <p class="bg-color-blue"> </p>
+        <% elsif tracker.category.group == "environmental" %>
+          <p class="bg-color-green"> </p>
+        <% elsif tracker.category.group == "lifestyle"  %>
+          <p class="bg-color-red"> </p>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 
 <br>
 
 <% latest_trackers = @trackers.last(5) %>
 
-<div class="card-tracker">
-  <img class="tracker-circle" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-tracker-infos">
-    <% latest_trackers.each do |tracker| %>
-      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-      <p>rating: <%= tracker.rating %></p>
-      <p><%= tracker.notes%> </p>
-    </div>
-    <div>
-    <p><%= tracker.start_time %> </p>
-  <% end %>
-  </div>
-</div>
+<% latest_trackers.each do |tracker| %>
+  <div class="card-tracker">
+    <div class="card-tracker-infos">
 
-<br>
+      <div class="card-tracker-icon">
+      <% if tracker.category.group == "skincare" %>
+        <div class="btn btn-icon btn-skincare" style="height: 75px; width: 75px;">
+          <% if tracker.category.title == "medications" %>
+            <i class="fas fa-prescription-bottle-alt"></i>
+          <% elsif tracker.category.title == "products" %>
+            <i class="fas fa-prescription-bottle"></i>
+          <% elsif tracker.category.title == "supplements" %>
+            <i class="fas fa-pills"></i>
+          <% elsif tracker.category.title == "treatments" %>
+            <i class="fas fa-user-md"></i>
+          <% end %>
+        </div>
+
+      <% elsif tracker.category.group == "environmental" %>
+        <div class="btn btn-icon btn-environmental">
+          <% if tracker.category.title == "sun" %>
+            <i class="far fa-sun"></i>
+          <% elsif tracker.category.title == "humidity" %>
+            <i class="fas fa-humidity"></i>
+          <% elsif tracker.category.title == "temperature" %>
+            <i class="fas fa-temperature-high"></i>
+          <% elsif tracker.category.title == "pollution" %>
+            <i class="fas fa-sun-dust"></i>
+          <% end %>
+        </div>
+
+      <% elsif tracker.category.group == "lifestyle" %>
+        <div class="btn btn-lifestyle">
+          <% if tracker.category.title == "sun" %>
+            <i class="far fa-sun"></i>
+          <% elsif tracker.category.title == "humidity" %>
+            <i class="fas fa-humidity"></i>
+          <% elsif tracker.category.title == "temperature" %>
+            <i class="fas fa-temperature-high"></i>
+          <% elsif tracker.category.title == "pollution" %>
+            <i class="fas fa-sun-dust"></i>
+          <% end %>
+        </div>
+
+      <% end %>
+    </div>
+
+      <div class="card-tracker-infos-details">
+        <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+        <p>rating: <%= tracker.rating %></p>
+        <p><%= tracker.notes%> </p>
+      </div>
+    </div>
+
+    <div>
+      <p><%= tracker.start_time %> </p>
+    </div>
+  </div>
+<% end %>
+
 
 <div class="card-link">
-  <h5> <%= link_to "+ New Tracker", treatment_categories_path %> </h5>
+  <h5> <%= link_to "New Entry", treatment_categories_path %> </h5>
 </div>
 
 <div class="progress-gallery-link">

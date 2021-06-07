@@ -1,24 +1,22 @@
-<h1> Treatments </h1>
+<h1 class="treatment-header"> Your Treatments </h1>
 
-<div class="card">
-  <div class="card-body">
+<div class="all-cards-treatment">
+  <div class="card-treatment">
     <% @treatments.each do |treatment| %>
-      <h2> <%= link_to treatment_trackers_path(treatment), class: "card-link" do %>
-       <div>
+      <h3> <%= link_to treatment_trackers_path(treatment), class: "card-link" do %>
+       <!-- <div> -->
         <div class="card-treatment-info">
-        <h2><%= treatment.skin_condition %></h2>
+        <h3><%= treatment.skin_condition %></h3>
         </div>
-      </div>
+     <!--  </div> -->
     <% end %>
   <% end %>
-  </h2>
+  </h3>
  </div>
 </div>
 
 
 
-<div class="cards-group">
-  <button style="background-color:rgb(255, 194, 71)">
+<div class="card-add-treatment">
    <h3><%= link_to "New Treatment", new_treatment_path %></h3>
-  </button>
 </div>
