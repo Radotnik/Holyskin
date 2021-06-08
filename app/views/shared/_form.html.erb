@@ -12,7 +12,7 @@
     <div class="photo">
        <%#= f.input :category, collection: Category.all %>
       <% if params[:group] == 'skincare' or params[:group] == 'environmental'%>
-        <%= f.input :photo, as: :file, input_html: { class: 'd-none'}, label_html: { class: ''}, label: '<i class="fas fa-camera"></i>'.html_safe %>
+        <%= f.input :photo, as: :file, input_html: { class: 'd-none'}, label_html: { class: ''}, label: '<i class=" dareos fas fa-camera"></i> Upload your photo'.html_safe %>
       <% end %>
     </div>
     <div class="save">

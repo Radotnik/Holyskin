@@ -1,13 +1,15 @@
 <h1> Add new treatment </h1>
-<p>
-  <%= simple_form_for(@treatment) do |f| %>
-    <%= f.input :skin_condition %>
-    <%= f.input :start_date %>
-    <%#= f.input :diable_end_date, label: false do %>
-     <%= label_tag "ongoing" %>
-      <%= check_box_tag :disable_end_date %>
-    <%= f.input :end_date %>
-    <%= f.input :status %>
-    <%= f.button :submit %>
-  <% end %>
-</p>
+<div class="form-treatment">
+  <p>
+    <%= simple_form_for(@treatment) do |f| %>
+      <%= f.input :skin_condition %>
+      <%= f.input :start_date %>
+      <%#= f.input :diable_end_date, label: false do %>
+       <%= label_tag "ongoing" %>
+        <%= check_box_tag :disable_end_date %>
+      <%= f.input :end_date %>
+      <%= f.input :status %>
+      <%= f.button :submit, id: "treatment-button"%>
+    <% end %>
+  </p>
+</div>
