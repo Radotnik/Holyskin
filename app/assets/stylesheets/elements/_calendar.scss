@@ -1,6 +1,6 @@
 .tracker p {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
   }
 
@@ -21,8 +21,8 @@
     background-color: white;
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
     border-radius: 5px;
-    padding: 10px;
-    margin: 20px;
+    width: 100%;
+
     td {
       width: 120px !important;
       &.future.current-month{

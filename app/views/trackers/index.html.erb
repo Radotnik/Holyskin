@@ -1,7 +1,9 @@
+<div class="dashboard-layout container" id="dashboard">
+
 <h1>Your Dashboard</h1>
 <h2>Hello <%= current_user.full_name %>!</h2>
 
-<div class="dashboard-layout">
+
   <%= month_calendar(events: @trackers) do |date, trackers| %>
     <%= date.strftime("%e") %>
 
