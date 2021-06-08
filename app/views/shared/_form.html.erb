@@ -2,7 +2,26 @@
     <%= simple_form_for([@treatment, @tracker]) do |f| %>
     <div class="title">
       <%= title %>
-      <input class="slider" type="range" id="tracker_rating" name="tracker[rating]" min="0" value="50" max="100">
+      <input class="slider" type="range" steps="1" id="tracker_rating" name="tracker[rating]" min="0" value="5" max="10">
+      <ul class="range-labels">
+        <li></li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li>|</li>
+        <li></li>
+      </ul>
+      <div class="thumb">
+        <ul class="thumbs">
+          <li><i class="fas fa-thumbs-down"></i></li>
+          <li><i class="fas fa-thumbs-up"></i></li>
+        </ul>
+      </div>
     </div>
     <%= f.hidden_field :category_id, value: @category.id %>
     <div class="notes">
