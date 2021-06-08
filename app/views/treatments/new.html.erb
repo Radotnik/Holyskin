@@ -8,7 +8,7 @@
        <%= label_tag "ongoing" %>
         <%= check_box_tag :disable_end_date %>
       <%= f.input :end_date %>
-      <%= f.input :status %>
+      <%= f.input :status, as: :select, collection: ["start", "in progress", "end"], placeholder: 'Select Status', label: "Select Status" %>
       <%= f.button :submit, id: "treatment-button"%>
     <% end %>
   </p>
