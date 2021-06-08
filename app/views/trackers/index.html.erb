@@ -29,39 +29,39 @@
             <% if tracker.category.group == "skincare" %>
               <div class="btn btn-icon btn-skincare" style="height: 90px; width: 90px;">
                 <% if tracker.category.title == "medications" %>
-                  <i class="fas fa-prescription-bottle-alt"></i>
+                  <i id="c" class="fas fa-prescription-bottle-alt"></i>
                 <% elsif tracker.category.title == "products" %>
-                  <i class="fas fa-prescription-bottle"></i>
+                  <i id="c" class="fas fa-prescription-bottle"></i>
                 <% elsif tracker.category.title == "supplements" %>
-                  <i class="fas fa-pills"></i>
+                  <i id="c" class="fas fa-pills"></i>
                 <% elsif tracker.category.title == "treatments" %>
-                  <i class="fas fa-user-md"></i>
+                  <i id="c" class="fas fa-user-md"></i>
                 <% end %>
               </div>
 
             <% elsif tracker.category.group == "environmental" %>
               <div class="btn btn-icon btn-environmental" style="height: 90px; width: 90px;">
                 <% if tracker.category.title == "sun" %>
-                  <i class="far fa-sun"></i>
+                  <i id="c" class="far fa-sun"></i>
                 <% elsif tracker.category.title == "humidity" %>
-                  <i class="fas fa-water"></i>
+                  <i id="c" class="fas fa-water"></i>
                 <% elsif tracker.category.title == "temperature" %>
-                  <i class="fas fa-temperature-high"></i>
+                  <i id="c" class="fas fa-temperature-high"></i>
                 <% elsif tracker.category.title == "pollution" %>
-                  <i class="fas fa-smog"></i>
+                  <i id="c" class="fas fa-smog"></i>
                 <% end %>
               </div>
 
             <% elsif tracker.category.group == "lifestyle" %>
               <div class="btn btn-icon btn-lifestyle" style="height: 90px; width: 90px;">
                 <% if tracker.category.title == "sleep" %>
-                  <i class="fas fa-bed"></i>
+                  <i id="c" class="fas fa-bed"></i>
                 <% elsif tracker.category.title == "stress" %>
-                  <i class="fas fa-sad-cry"></i>
+                  <i id="c" class="fas fa-sad-cry"></i>
                 <% elsif tracker.category.title == "workout" %>
-                  <i class="fas fa-running"></i>
+                  <i id="c" class="fas fa-running"></i>
                 <% elsif tracker.category.title == "diet" %>
-                  <i class="fas fa-hamburger"></i>
+                  <i id="c" class="fas fa-hamburger"></i>
                 <% end %>
               </div>
 
