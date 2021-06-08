@@ -8,9 +8,15 @@
 .navbar-brand span {
   font-family: $body-font;
   font-size: $size-body-l;
-  font-weight: bold;
-  color: #005f99;
+  // font-weight: bold;
+  color: $header-color;
 }
+
+// #nav {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
