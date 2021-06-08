@@ -12,5 +12,6 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @treatment = Treatment.find(params[:treatment_id])
     @trackers = Tracker.where(category: @category, treatment: @treatment)
+    @tracker_progress = @trackers.find_by(category: @category)
   end
 end

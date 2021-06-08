@@ -41,7 +41,7 @@ Category.new(group: 'lifestyle', title: 'diet').save!
 
 file = URI.open('https://images.unsplash.com/photo-1595514446083-236b9985a0e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
 tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'seeing progress')
-tracker.photo.attach(io: file, filename: 'happy_skin.png', content_type: 'image/png')
+tracker.photos.attach(io: file, filename: 'happy_skin.png', content_type: 'image/png')
 tracker.save!
 
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '4', notes: 'seeing progress', created_at: "2021-06-02")
@@ -61,19 +61,19 @@ tracker.save!
 
 file = URI.open('https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '2', notes: 'It looks like this today')
-tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
+tracker.photos.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
 tracker.save!
 
 
 file = URI.open('https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'I think there is a slight improvement')
-tracker.photo.attach(io: file, filename: 'eczema_skin2.png', content_type: 'image/png')
+tracker.photos.attach(io: file, filename: 'eczema_skin2.png', content_type: 'image/png')
 tracker.save!
 
 
 file = URI.open('https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'Feeling confident :)')
-tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
+tracker.photos.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
 tracker.save!
 
 
