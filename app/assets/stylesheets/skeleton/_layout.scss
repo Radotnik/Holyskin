@@ -18,9 +18,12 @@
   margin: 60px;
 }
 
-// #dashboard {
-//   margin: 10px;
-// }
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
 
 a {
   text-decoration: none !important;
@@ -47,4 +50,6 @@ h2 {
 
 p {
   color: $grey-2;
+  font-size: 8px;
+
 }

@@ -22,6 +22,8 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.4);
     border-radius: 5px;
     width: 100%;
+    margin-top: 15px;
+    padding-top: 10px;
 
     td {
       width: 120px !important;
@@ -45,6 +47,7 @@
     .calendar-heading {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 5px;
 
       a {
         width: 75px !important;

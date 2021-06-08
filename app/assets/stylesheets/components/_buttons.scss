@@ -1,16 +1,3 @@
-// .btn-flat {
-//   color: #44403c;
-//   padding: 8px 24px;
-//   border-radius: 5px;
-//   background: $info-color;
-//   transition: background 0.3s ease;
-// }
-
-// .btn-flat:hover {
-//   background: $info-color;
-//   color: white;
-// }
-
 .btn-category {
   margin: 0 auto;
   display: flex;
@@ -67,6 +54,11 @@
   color: $grey-5;
 }
 
+#i {
+  color: $grey-5;
+}
+
+
 #treatment-button {
   margin-top: 30px;
   background-color: #FFC65A;
@@ -78,29 +70,6 @@
 #treatment-button:hover {
   box-shadow: 0 0 2px;
   -webkit-transition: .2s;
-}
-
-// .btn.btn-okay {
-//   margin-top: 30px;
-//   background-color: #FFC65A;
-//   padding: 30px;
-//   border-radius: 5px;
-// }
-// #medications #prdoucts #supplements #treatments {
-//   background-color: $skincare;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width:  30px;
-//   height: 30px;
-//   // padding: 8px 24px;
-//   cursor: pointer;
-//   border-radius: 50%;
-//   text-align: center;
-// }
-
-#i {
-  color: $grey-5;
 }
 
 // .btn-icon:hover {
