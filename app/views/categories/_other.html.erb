@@ -4,24 +4,79 @@
 <div>
   <span><%= "You haven’t uploaded any trackers here yet!" if trackers.empty? %></span>
   <div>
-    <%= link_to "New progress tracker", new_treatment_tracker_path({
+    <%= link_to "New tracker here", new_treatment_tracker_path({
       treatment_id: treatment.id,
       category_id: category.id,
       group: category.group
     }) %>
   </div>
 </div>
-<div class=“card-tracker-infos-details”>
-  <% trackers.each do |tracker| %>
-    <div>
-      <% if tracker.photo.attached? %>
-        <%= cl_image_tag tracker.photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
+
+<div class="card-tracker-all">
+  <% latest_trackers = trackers.last(3) %>
+
+  <% latest_trackers.each do |tracker| %>
+    <div class="card-tracker">
+      <div class="card-tracker-infos">
+
+        <div class="card-tracker-icon">
+        <% if tracker.category.group == "skincare" %>
+          <div class="btn btn-icon btn-skincare" style="height: 90px; width: 90px;">
+            <% if tracker.category.title == "medications" %>
+              <i id="c" class="fas fa-prescription-bottle-alt"></i>
+            <% elsif tracker.category.title == "products" %>
+              <i id="c" class="fas fa-prescription-bottle"></i>
+            <% elsif tracker.category.title == "supplements" %>
+              <i id="c" class="fas fa-pills"></i>
+            <% elsif tracker.category.title == "treatments" %>
+              <i id="c" class="fas fa-user-md"></i>
+            <% end %>
+          </div>
+
+        <% elsif tracker.category.group == "environmental" %>
+          <div class="btn btn-icon btn-environmental" style="height: 90px; width: 90px;">
+            <% if tracker.category.title == "sun" %>
+              <i id="c" class="far fa-sun"></i>
+            <% elsif tracker.category.title == "humidity" %>
+              <i id="c" class="fas fa-water"></i>
+            <% elsif tracker.category.title == "temperature" %>
+              <i id="c" class="fas fa-temperature-high"></i>
+            <% elsif tracker.category.title == "pollution" %>
+              <i id="c" class="fas fa-smog"></i>
+            <% end %>
+          </div>
+
+        <% elsif tracker.category.group == "lifestyle" %>
+          <div class="btn btn-icon btn-lifestyle" style="height: 90px; width: 90px;">
+            <% if tracker.category.title == "sleep" %>
+              <i id="c" class="fas fa-bed"></i>
+            <% elsif tracker.category.title == "stress" %>
+              <i id="c" class="fas fa-sad-cry"></i>
+            <% elsif tracker.category.title == "workout" %>
+              <i id="c" class="fas fa-running"></i>
+            <% elsif tracker.category.title == "diet" %>
+              <i id="c" class="fas fa-hamburger"></i>
+            <% end %>
+          </div>
+
+        <% end %>
+      </div>
+
+        <div class="card-tracker-infos-details">
+          <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+          <p>rating: <%= tracker.rating %></p>
+          <p><%= tracker.notes%> </p>
+        </div>
+      </div>
+
+      <div>
+        <p><%= tracker.start_time %> </p>
+      </div>
     </div>
-    <div>
-      <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-      <p>rating: <%= tracker.rating %></p>
-      <p><%= tracker.notes%> </p>
-    </div>
+
   <% end %>
+</div>
+
+<div>
+  <h5> <%= link_to "Add a different tracker", treatment_categories_path %> </h5>
 </div>
