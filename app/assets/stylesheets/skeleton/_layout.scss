@@ -18,6 +18,13 @@
   margin: 60px;
 }
 
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 a {
   text-decoration: none !important;
   color: $grey-2 !important;
@@ -29,7 +36,6 @@ body {
   background: rgb(226,241,247);
   background: linear-gradient(148deg, rgba(226,241,247,1) 33%, rgba(226,241,247,0.1774685650887574) 56%);
 }
-
 
 h1 {
   color: $header-color;
@@ -44,4 +50,6 @@ h2 {
 
 p {
   color: $grey-2;
+  font-size: 8px;
+
 }
