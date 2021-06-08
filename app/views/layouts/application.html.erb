@@ -19,7 +19,7 @@
     <div id="page-container">
       <div id="content-wrap">
         <%= render 'shared/navbar' %>
-          <div id='yield-wrap'>
+          <div id="<%= 'yield-wrap' unless params[:controller] == 'trackers' && params[:action] == 'index'%>">
             <%= yield %>
           </div>
         <%= render 'shared/footer' %>

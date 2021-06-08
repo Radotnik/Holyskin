@@ -24,20 +24,38 @@
   border-radius: 50%;
 }
 
+.card-tracker-all {
+  // padding: 20px;
+  // margin: 20px 100px 0 100px;
+}
+
 .card-tracker {
   display: flex;
-  justify-content: center;
+  // flex-shrink: 2;
+  // justify-content: center;
   overflow: hidden;
-  height: 150px;
+  // height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   margin: 20px;
   padding-right: 30px;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   border-radius: 5px;
 }
+
+.card-tracker-links {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 20px;
+  padding: 20px;
+  align-items: center;
+  border-radius: 5px;
+}
+
 
 .card-tracker h2 {
   font-family: $headers-font;
@@ -48,7 +66,7 @@
 
 .card-tracker p {
   font-family: $body-font;
-  font-size: $size-body-l;
+  font-size: $size-body-s;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -56,29 +74,58 @@
 }
 
 .card-tracker-infos {
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  justify-content: space-evenly;
+  margin: 20px;
+  // justify-content: space-evenly;
 }
 
-.card-tracker .card-tracker-infos {
-  padding: 16px;
+#link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 30px;
+}
+
+#new {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.fas.fa-plus-circle {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+// .card-tracker.card-tracker-infos {
+//   padding: 16px;
+//   align-items: center;
+//   // margin: 30px;
+// }
+
+// .date-icon {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+.card-tracker-icon {
+  display: flex;
+  // flex-direction: row;
 }
 
 .card-tracker-infos-details {
   display: flex;
   flex-direction: column;
-  margin: 30px;
-
+  // margin-left: 20px;
 }
 
-.card-button-icon {
-  height: 50px;
-  width: 50px;
+.card-tracker-infos-details b {
+  color: $header-color;
 }
+
+// .card-button-icon {
+//   height: 50px;
+//   width: 50px;
+// }
 
 .cards-links {
   display: flex;
