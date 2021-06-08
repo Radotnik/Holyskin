@@ -17,7 +17,7 @@
   <% @trackers.each do |tracker| %>
     <div>
       <% if tracker.photo.attached? %>
-        <%#= cl_image_tag tracker.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag tracker.photo.key, height: 300, width: 400, crop: :fill %>
       <% end %>
     </div>
     <div>

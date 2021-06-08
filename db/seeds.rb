@@ -45,19 +45,19 @@ tracker.photo.attach(io: file, filename: 'happy_skin.png', content_type: 'image/
 tracker.save!
 
 
-file = URI.open('https://unsplash.com/photos/tWTFjznQlBA')
+file = URI.open('https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '2', notes: 'It looks like this today')
 tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
 tracker.save!
 
 
-file = URI.open('https://unsplash.com/photos/S-NrwbUgNrU')
+file = URI.open('https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'I think there is a slight improvement')
 tracker.photo.attach(io: file, filename: 'eczema_skin2.png', content_type: 'image/png')
 tracker.save!
 
 
-file = URI.open('https://unsplash.com/photos/tWTFjznQlBA')
+file = URI.open('https://images.unsplash.com/photo-1606501176727-e24f1e183fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80')
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'Feeling confident :)')
 tracker.photo.attach(io: file, filename: 'eczema_skin1.png', content_type: 'image/png')
 tracker.save!

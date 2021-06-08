@@ -60,6 +60,19 @@
   -webkit-transition: .2s;
 }
 
+#treatment-button {
+  margin-top: 30px;
+  background-color: #FFC65A;
+  //width: 90px;
+  //height: 30px;
+  border-radius: 5px;
+}
+
+#treatment-button:hover {
+  box-shadow: 0 0 2px;
+  -webkit-transition: .2s;
+}
+
 // .btn.btn-okay {
 //   margin-top: 30px;
 //   background-color: #FFC65A;
