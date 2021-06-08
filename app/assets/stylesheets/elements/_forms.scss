@@ -6,19 +6,20 @@
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 7px;
-  padding: 20px;
+  padding: 16px;
   // height: 500px;
-   width: 300px;
+  // width: 300px;
 }
 
 .slider{
+  position: relative;
+  z-index: 100;
   -webkit-appearance: none;
   appearance: none;
   background: #BBDEFB;
   outline: none;
-  opacity: 0.7;
   width: 100%;
-  height: 5px;
+  height: 4px;
   border-radius: 3px;
   -webkit-transition: .2s;
 }
@@ -26,6 +27,7 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
+  z-index: 100;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -67,7 +69,7 @@
   border: 1px dotted grey;
   border-radius: 5px;
   // margin-left: 5px;
-  padding: 10px;
+  padding: 7px;
 }
 
 .form-treatment {
@@ -81,6 +83,50 @@
   padding: 20px;
   height: 500px;
   width: 100%;
+}
+
+.range-labels {
+  // margin: 18px -41px 0;
+  padding: 0;
+  list-style: none;
+  width: 99%;
+  // margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    position: relative;
+    float: left;
+    // width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: -13px;
+      right: 0;
+      left: 0;
+      content: "";
+      margin: 0px auto ;
+      width: 8px;
+      height: 8px;
+      background: #BBDEFB;
+      border-radius: 50%;
+    }
+  }
+  li:nth-child(1)::before{
+    left: 1px;
+  }
+}
+
+.thumbs{
+  padding-left: 0rem;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: -42px;
 }
 
 
