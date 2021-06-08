@@ -78,5 +78,11 @@
 </div>
 
 <div>
+  <%= line_chart trackers.group_by_day(:created_at).maximum(:rating) %>
+</div>
+
+<br>
+
+<div>
   <h5> <%= link_to "Add a different tracker", treatment_categories_path %> </h5>
 </div>
