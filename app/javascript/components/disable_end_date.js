@@ -3,18 +3,17 @@ const disable = () => {
 
   const field = document.querySelector(".treatment_end_date")
 
-checkbox.addEventListener("change",() => {
+if (checkbox) {
+  checkbox.addEventListener("change",() => {
 
-  if (checkbox.checked){
-    field.classList.add("d-none")
-  } else {
-    field.classList.remove("d-none")
-  }
-
-})
-
+    if (checkbox.checked){
+      field.classList.add("d-none")
+    } else {
+      field.classList.remove("d-none")
+    }
+  })
 }
-
+}
 
 export {disable}
 
