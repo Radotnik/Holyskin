@@ -55,7 +55,7 @@ tracker.save!
 
 file = URI.open('https://images.unsplash.com/photo-1595514446083-236b9985a0e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
 tracker = Tracker.new(category_id: Category.first.id, treatment_id: treatment.id, rating: '3', notes: 'seeing progress')
-tracker.photo.attach(io: file, filename: 'happy_skin.png', content_type: 'image/png')
+tracker.photos.attach(io: file, filename: 'happy_skin.png', content_type: 'image/png')
 tracker.save!
 
 
