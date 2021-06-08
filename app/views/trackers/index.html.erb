@@ -1,93 +1,98 @@
 <h1>Your Dashboard</h1>
 <h2>Hello <%= current_user.full_name %>!</h2>
 
-
+<div class="dashboard-layout">
   <%= month_calendar(events: @trackers) do |date, trackers| %>
     <%= date.strftime("%e") %>
 
-    <% trackers.each do |tracker| %>
-      <div class="tracker">
-        <% if tracker.category.group == "skincare" %>
-          <p class="bg-color-blue"> </p>
-        <% elsif tracker.category.group == "environmental" %>
-          <p class="bg-color-green"> </p>
-        <% elsif tracker.category.group == "lifestyle"  %>
-          <p class="bg-color-red"> </p>
-        <% end %>
-      </div>
-    <% end %>
-  <% end %>
-
-<br>
-
-  <div class="card-tracker-all">
-    <% latest_trackers = @trackers.last(5) %>
-
-    <% latest_trackers.each do |tracker| %>
-      <div class="card-tracker">
-        <div class="card-tracker-infos">
-
-          <div class="card-tracker-icon">
+      <% trackers.each do |tracker| %>
+        <div class="tracker">
           <% if tracker.category.group == "skincare" %>
-            <div class="btn btn-icon btn-skincare" style="height: 90px; width: 90px;">
-              <% if tracker.category.title == "medications" %>
-                <i class="fas fa-prescription-bottle-alt"></i>
-              <% elsif tracker.category.title == "products" %>
-                <i class="fas fa-prescription-bottle"></i>
-              <% elsif tracker.category.title == "supplements" %>
-                <i class="fas fa-pills"></i>
-              <% elsif tracker.category.title == "treatments" %>
-                <i class="fas fa-user-md"></i>
-              <% end %>
-            </div>
-
+            <p class="bg-color-blue"> </p>
           <% elsif tracker.category.group == "environmental" %>
-            <div class="btn btn-icon btn-environmental" style="height: 90px; width: 90px;">
-              <% if tracker.category.title == "sun" %>
-                <i class="far fa-sun"></i>
-              <% elsif tracker.category.title == "humidity" %>
-                <i class="fas fa-water"></i>
-              <% elsif tracker.category.title == "temperature" %>
-                <i class="fas fa-temperature-high"></i>
-              <% elsif tracker.category.title == "pollution" %>
-                <i class="fas fa-smog"></i>
-              <% end %>
-            </div>
-
-          <% elsif tracker.category.group == "lifestyle" %>
-            <div class="btn btn-icon btn-lifestyle" style="height: 90px; width: 90px;">
-              <% if tracker.category.title == "sleep" %>
-                <i class="fas fa-bed"></i>
-              <% elsif tracker.category.title == "stress" %>
-                <i class="fas fa-sad-cry"></i>
-              <% elsif tracker.category.title == "workout" %>
-                <i class="fas fa-running"></i>
-              <% elsif tracker.category.title == "diet" %>
-                <i class="fas fa-hamburger"></i>
-              <% end %>
-            </div>
-
+            <p class="bg-color-green"> </p>
+          <% elsif tracker.category.group == "lifestyle"  %>
+            <p class="bg-color-red"> </p>
           <% end %>
         </div>
+      <% end %>
+    <% end %>
 
-          <div class="card-tracker-infos-details">
-            <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-            <p>rating: <%= tracker.rating %></p>
-            <p><%= tracker.notes%> </p>
+    <div class="card-tracker-all">
+      <% latest_trackers = @trackers.last(5) %>
+
+      <% latest_trackers.each do |tracker| %>
+        <div class="card-tracker">
+          <div class="card-tracker-infos">
+
+            <div class="card-tracker-icon">
+            <% if tracker.category.group == "skincare" %>
+              <div class="btn btn-icon btn-skincare" style="height: 90px; width: 90px;">
+                <% if tracker.category.title == "medications" %>
+                  <i id="c" class="fas fa-prescription-bottle-alt"></i>
+                <% elsif tracker.category.title == "products" %>
+                  <i id="c" class="fas fa-prescription-bottle"></i>
+                <% elsif tracker.category.title == "supplements" %>
+                  <i id="c" class="fas fa-pills"></i>
+                <% elsif tracker.category.title == "treatments" %>
+                  <i id="c" class="fas fa-user-md"></i>
+                <% end %>
+              </div>
+
+            <% elsif tracker.category.group == "environmental" %>
+              <div class="btn btn-icon btn-environmental" style="height: 90px; width: 90px;">
+                <% if tracker.category.title == "sun" %>
+                  <i id="c" class="far fa-sun"></i>
+                <% elsif tracker.category.title == "humidity" %>
+                  <i id="c" class="fas fa-water"></i>
+                <% elsif tracker.category.title == "temperature" %>
+                  <i id="c" class="fas fa-temperature-high"></i>
+                <% elsif tracker.category.title == "pollution" %>
+                  <i id="c" class="fas fa-smog"></i>
+                <% end %>
+              </div>
+
+            <% elsif tracker.category.group == "lifestyle" %>
+              <div class="btn btn-icon btn-lifestyle" style="height: 90px; width: 90px;">
+                <% if tracker.category.title == "sleep" %>
+                  <i id="c" class="fas fa-bed"></i>
+                <% elsif tracker.category.title == "stress" %>
+                  <i id="c" class="fas fa-sad-cry"></i>
+                <% elsif tracker.category.title == "workout" %>
+                  <i id="c" class="fas fa-running"></i>
+                <% elsif tracker.category.title == "diet" %>
+                  <i id="c" class="fas fa-hamburger"></i>
+                <% end %>
+              </div>
+
+            <% end %>
+          </div>
+
+            <div class="card-tracker-infos-details">
+              <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+              <p>rating: <%= tracker.rating %></p>
+              <p><%= tracker.notes%> </p>
+            </div>
+          </div>
+
+          <div>
+            <p><%= tracker.start_time %> </p>
           </div>
         </div>
 
-        <div>
-          <p><%= tracker.start_time %> </p>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+
+  <div class="cards-links">
+    <div class="card-tracker">
+      <h5> <%= link_to "Progress Gallery", treatment_category_path(@treatment.id, @progress_category_id) %> </h5>
+    </div>
+
+    <div class="card-tracker">
+      <h5> <%= link_to "New Entry", treatment_categories_path %> </h5>
+    </div>
+
+    <!-- <div class="progress-gallery-link"> -->
   </div>
 
-<div class="btn btn-okay">
-  <h5> <%= link_to "New Entry", treatment_categories_path %> </h5>
-</div>
-
-<div class="progress-gallery-link">
-  <h5> <%= link_to "Progress Gallery", treatment_category_path(@treatment.id, @progress_category_id) %> </h5>
 </div>

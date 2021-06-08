@@ -18,6 +18,19 @@
   margin: 60px;
 }
 
+a {
+  text-decoration: none !important;
+  color: $grey-2 !important;
+}
+
+body {
+  color: $grey-2 !important;
+  // background-color: $secondary-color !important;
+  background: rgb(226,241,247);
+  background: linear-gradient(148deg, rgba(226,241,247,1) 33%, rgba(226,241,247,0.1774685650887574) 56%);
+}
+
+
 h1 {
   color: $header-color;
   font-family: $body-font;
@@ -27,4 +40,8 @@ h1 {
 h2 {
   color: $grey-2;
   font-family: $body-font;
+}
+
+p {
+  color: $grey-2;
 }
