@@ -6,7 +6,8 @@
 
 <!--       <i class="fas fa-calendar-alt"><%# link_to treatment_trackers_path(@treatment_id) %></i>
  -->
-      <% if @treatment %>
+      <% if @treatment && !@treatment.id.nil? %>
+      <%# raise %>
         <%= link_to treatment_trackers_path(@treatment), class: "fas fa-calendar-alt" do %>
         <% end %>
       <% end %>
