@@ -5,7 +5,9 @@ class CategoriesController < ApplicationController
     @lifestyle = Category.where(group: 'lifestyle')
 
     @categories = Category.all
-    @tracker = Tracker.new
+    @treatment = Treatment.find(params[:treatment_id])
+
+    # @tracker = Tracker.new
   end
 
   def show
