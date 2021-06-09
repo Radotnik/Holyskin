@@ -1,6 +1,6 @@
 
 <% if @category.title == "progress" %>
-  <%= render "progress", treatment: @treatment, category: @category, tracker_progress: @tracker_progress, trackers: @trackers %>
+  <%= render "progress", treatment: @treatment, category: @category, trackers: @trackers %>
 <% else %>
   <%= render "other", treatment: @treatment, category: @category, trackers: @trackers %>
 <% end %>
