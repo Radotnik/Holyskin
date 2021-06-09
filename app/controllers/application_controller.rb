@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:full_name, :email, :password, :age, :gender, :skin_type, :skin_color])
   end
 
+  def default_url_options
+  { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+
   # private
 
   # def skip_pundit?

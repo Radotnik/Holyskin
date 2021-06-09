@@ -1,6 +1,14 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="/"><span>HOLY SKIN</span></a>
+<!--     <a class="navbar-brand" href="/"><%= image_tag ('kindness.png')%></a>
+ -->
+  <div class="navbar-logo">
+    <a class="navbar-brand" href="/"><%= image_tag ('happy.png')%><span>Holy Skin</span></a>
+  </div>
 
+
+<!--   <div id="nav">
+    <a class="navbar-brand" href="/"><%= image_tag ('beauty-treatment.png')%></a>
+  </div> -->
   <div>
     <% if user_signed_in? %>
     <%= image_tag "https://kitt.lewagon.com/placeholder/users/Radotnik", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
