@@ -1,13 +1,17 @@
 <div class="footer fixed-bottom">
   <div class="footer-elements">
     <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      This app is made with <i class="fas fa-heart"></i> at Le Wagon
+
+      <a href="/treatments"><i class="fas fa-home"></i></a>
+
+<!--       <i class="fas fa-calendar-alt"><%# link_to treatment_trackers_path(@treatment_id) %></i>
+ -->
+      <% if @treatment %>
+        <%= link_to treatment_trackers_path(@treatment), class: "fas fa-calendar-alt" do %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
+
+
