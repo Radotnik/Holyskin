@@ -5,11 +5,17 @@
   box-shadow: 0 0 15px rgba(0,0,0,.2);
 }
 
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-brand span {
   font-family: $body-font;
-  font-size: $size-body-l;
+  font-size: $size-body-m;
   // font-weight: bold;
   color: $header-color;
+  margin-left: 6px;
 }
 
 // #nav {
