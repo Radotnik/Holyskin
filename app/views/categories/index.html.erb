@@ -1,4 +1,4 @@
-<div class="card d-flex align-content-center" style="width: 23rem;">
+<div class="card d-flex align-content-center" style="width: 21rem;">
   <div class="card-body">
 
         <h5 class="card-title">Skin care</h5>
@@ -25,7 +25,7 @@
           <div class="card-group d-flex">
             <% @environmental.each do |environmental| %>
               <div class="btn-category">
-                <%= link_to new_treatment_tracker_path(group: environmental.group, category_id: environmental.id, title: "Sun exposure:"), class: "btn btn-icon btn-environmental" do %>
+                <%= link_to new_treatment_tracker_path(group: environmental.group, category_id: environmental.id, title: "Sun exposure today:"), class: "btn btn-icon btn-environmental" do %>
                   <% if environmental.title == "sun" %>
                     <i id="i" class="far fa-sun"></i>
                   <% elsif environmental.title == "humidity" %>
@@ -45,7 +45,7 @@
             <div class="card-group d-flex">
               <% @lifestyle.each do |lifestyle| %>
                 <div class="btn-category">
-                  <%= link_to new_treatment_tracker_path(group: lifestyle.group, category_id: lifestyle.id, title: "Sleep quality:"), class: "btn btn-icon btn-lifestyle" do %>
+                  <%= link_to new_treatment_tracker_path(group: lifestyle.group, category_id: lifestyle.id, title: "Sleep quality today:"), class: "btn btn-icon btn-lifestyle" do %>
                     <% if lifestyle.title == "sleep" %>
                       <i id="i" class="fas fa-bed"></i>
                     <% elsif lifestyle.title == "stress" %>
