@@ -1,7 +1,7 @@
 <div class="form">
     <%= simple_form_for([@treatment, @tracker]) do |f| %>
     <div class="title">
-      <%= title %>
+      <%= params[:title] %>
       <input class="slider" type="range" steps="1" id="tracker_rating" name="tracker[rating]" min="0" value="5" max="10">
       <ul class="range-labels">
         <li></li>
