@@ -58,14 +58,13 @@
   color: $grey-5;
 }
 
-
-// #treatment-button {
-//   margin-top: 30px;
-//   background-color: #FFC65A;
-//   //width: 90px;
-//   //height: 30px;
-//   border-radius: 5px;
-// }
+#treatment-button {
+  margin-top: 30px;
+  background-color: $info-color;
+  border-radius: 5px;
+  color: $grey-1;
+  font-family: $body-font;
+}
 
 // #treatment-button:hover {
 //   box-shadow: 0 0 2px;
