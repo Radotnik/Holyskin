@@ -3,11 +3,15 @@
 <h1>Your Dashboard</h1>
 <h2>Hello <%= current_user.full_name %>!</h2>
 
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+  <span class="popuptext" id="myPopup">A Simple Popup!</span>
+</div>
 
 <div class="dashboard-layout">
   <%= month_calendar(events: @trackers, attribute: :created_at) do |date, trackers| %>
     <%= date.strftime("%e") %>
 
+    <div class="tracker-display">
       <% trackers.each do |tracker| %>
         <div class="tracker">
           <% if tracker.category.group == "skincare" %>
@@ -20,6 +24,7 @@
         </div>
       <% end %>
     <% end %>
+  </div>
 
     <div class="card-tracker-all">
       <% latest_trackers = @trackers.last(5) %>
