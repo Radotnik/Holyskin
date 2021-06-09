@@ -40,38 +40,48 @@ Category.new(group: 'lifestyle', title: 'diet').save!
 
 #_________________________ Progress trackers
 
+file = URI.open("https://i.imgur.com/ZiH795w.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '1', notes: 'really bad eczema in my knees', created_at: "2021-05-31")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 00.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/Kd9oyAX.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '2', notes: 'Hmm still bad, but maybe a little progress', created_at: "2021-06-01")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 11.png', content_type: 'image/png')
 tracker.save!
 
+
+file = URI.open("https://i.imgur.com/uSp8VPm.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '4', notes: 'Feeling some progress', created_at: "2021-06-02")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 22.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/sC1YjGE.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'Not sure, stable', created_at: "2021-06-03")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 33.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/z0dvQhZ.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '5', notes: 'Feeling some progress', created_at: "2021-06-04")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 44.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/ggrRRFj.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '8', notes: 'Progress feeling confident :)', created_at: "2021-06-05")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 55.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/iccz5cq.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '3', notes: 'Omg its back... :(', created_at: "2021-06-09")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 5_33_relapse.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/6ya32IF.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '7', notes: 'Progress again', created_at: "2021-06-10")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 66.png', content_type: 'image/png')
 tracker.save!
 
+file = URI.open("https://i.imgur.com/fxBQkwi.png")
 tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '9', notes: 'Progress and feeling stable if I pay attention to lifestyle :)', created_at: "2021-06-11")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 77.png', content_type: 'image/png')
 tracker.save!

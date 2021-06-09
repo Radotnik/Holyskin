@@ -2,7 +2,7 @@
   <h1><%= category.title %></h1>
 </div>
 <div>
-  <span><%= "You haven’t uploaded any trackers here yet!" if trackers.empty? %></span>
+  <h5><span><%= "You haven’t uploaded any trackers here yet!" if trackers.empty? %></span></h5>
   <div>
     <%= link_to "New tracker here", new_treatment_tracker_path({
       treatment_id: treatment.id,
@@ -13,7 +13,7 @@
 </div>
 
 <div class="card-tracker-all">
-  <% latest_trackers = trackers.last(3) %>
+  <% latest_trackers = trackers.last(10) %>
 
   <% latest_trackers.each do |tracker| %>
     <div class="card-tracker">
