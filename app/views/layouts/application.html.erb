@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <title> <%= "Holyskin | Be well in your skin" %></title>
+    <meta name="description" content="<%= "Easily identify your skin triggers by tracking your skincare products, lifestyle choices, habits & more" %>">
     <%= favicon_link_tag %>
-    <title><%= "Holyskin | Uncover your skincare" %></title>
-    <meta name="description" content="<%= "Uncover your skincare one day at a time." %>">
+   
+    
 
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
@@ -18,13 +17,20 @@
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
 
-    <!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
-<meta name="twitter:title" content="<%= meta_title %>">
-<meta name="twitter:description" content="<%= meta_description %>">
-<meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
-<meta name="twitter:image:src" content="<%= meta_image %>">
+        <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:title" content="<%= meta_title %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+    <meta name="twitter:image:src" content="<%= meta_image %>">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
   <!--   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="custom.css"> -->
 
