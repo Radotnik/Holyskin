@@ -8,13 +8,13 @@ anime.timeline({loop: true})
     translateX: ["0.55em", 0],
     translateZ: 0,
     rotateZ: [180, 0],
-    duration: 750,
+    duration: 1000,
     easing: "easeOutExpo",
     delay: (el, i) => 50 * i
   }).add({
     targets: '.ml7',
     opacity: 0,
-    duration: 1000,
+    duration: 2000,
     easing: "easeOutExpo",
     delay: 1000
   });
