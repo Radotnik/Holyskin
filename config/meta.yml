@@ -1,0 +1,5 @@
+meta_product_name: "Holy Skin"
+meta_title: "Holy Skin - Uncover your skincare"
+meta_description: "Uncover your skincare one day at a time."
+meta_image: "happy.png" # should exist in `app/assets/images/`
+#twitter_account: "@product_twitter_account"   # required for Twitter Cards
