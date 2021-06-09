@@ -2,7 +2,7 @@
   <h1><%= category.title %></h1>
 </div>
 <div>
-  <span><%= "You haven’t uploaded any progress trackers with pictures yet!" if trackers.empty? %></span>
+  <h5><span><%= "You haven’t uploaded any progress trackers with pictures yet!" if trackers.empty? %></span></h5>
   <div>
     <%= link_to "New progress tracker", new_treatment_tracker_path({
       treatment_id: treatment.id,
@@ -13,18 +13,14 @@
 </div>
 <div class=“card-tracker-infos-details”>
     <div class="container">
-      <% unless tracker_progress.photos.blank? %>
+      <% unless tracker_progress.photo.blank? %>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
             <div class="carousel-inner carousel-height"  style="height: 400px; margin-top: 100px;">
-              <%= tracker_progress.photos.each do |photo| %>
-              <div class="carousel-item active">
-                <%= cl_image_tag photo.key, height: 300, crop: :fill, class: "d-block w-100" %>
+              <% trackers.each do |tracker| %>
+              <div class="carousel-item">
+                <%= cl_image_tag tracker.photo.key, height: 300, crop: :fill, class: "d-block w-100" %>
               </div>
+
               <% end %>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -36,13 +32,6 @@
               <span class="sr-only">Next</span>
             </a>
       </div>
-      <% end %>
-      <% trackers.each do |tracker| %>
-        <div>
-        <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
-        <p>rating: <%= tracker.rating %></p>
-        <p><%= tracker.notes%> </p>
-        </div>
       <% end %>
     </div>
 </div>
