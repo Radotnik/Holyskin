@@ -6,7 +6,7 @@
 }
 
 .btn-category p {
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -16,7 +16,6 @@
   align-items: center;
   width:  3rem;
   height: 3rem;
-  // padding: 8px 24px;
   cursor: pointer;
   border-radius: 50%;
   text-align: center;
@@ -38,16 +37,16 @@
 #save-button{
   border: none!important;
   margin-top: 3px;
-  background-color: #FFC65A;
-  //width: 90px;
-  //height: 30px;
+  background-color: $info-color;
+  padding: 10px 20px 10px 20px;
   border-radius: 5px;
+  color: $grey-5;
 }
 
-#save-button:hover {
-  box-shadow: 0 0 2px;
-  -webkit-transition: .2s;
-}
+// #save-button:hover {
+//   box-shadow: 0 0 2px;
+//   -webkit-transition: .2s;
+// }
 
 
 #c {
@@ -60,18 +59,18 @@
 }
 
 
-#treatment-button {
-  margin-top: 30px;
-  background-color: #FFC65A;
-  //width: 90px;
-  //height: 30px;
-  border-radius: 5px;
-}
+// #treatment-button {
+//   margin-top: 30px;
+//   background-color: #FFC65A;
+//   //width: 90px;
+//   //height: 30px;
+//   border-radius: 5px;
+// }
 
-#treatment-button:hover {
-  box-shadow: 0 0 2px;
-  -webkit-transition: .2s;
-}
+// #treatment-button:hover {
+//   box-shadow: 0 0 2px;
+//   -webkit-transition: .2s;
+// }
 
 // .btn-icon:hover {
 //   color: $primary-color;
