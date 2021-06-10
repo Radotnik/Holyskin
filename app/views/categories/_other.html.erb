@@ -24,7 +24,7 @@
   </div>
 
 <div class="chart">
-  <%= line_chart trackers.group_by_day(:created_at).maximum(:rating) %>
+  <%= line_chart trackers.group(:created_at).maximum(:rating) %>
 </div>
 
 <div class="card-tracker-all">
