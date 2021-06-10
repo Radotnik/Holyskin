@@ -43,6 +43,15 @@
   color: $grey-5;
 }
 
+.progress-button {
+  border: none!important;
+  margin-top: 3px;
+  background-color: $info-color;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: $grey-5;
+}
+
 // #save-button:hover {
 //   box-shadow: 0 0 2px;
 //   -webkit-transition: .2s;

@@ -3,11 +3,11 @@
   <p>
     <%= simple_form_for(@treatment) do |f| %>
       <%= f.input :skin_condition %>
-      <%= f.input :start_date %>
+      <%= f.input :start_date, html5: true %>
       <%#= f.input :diable_end_date, label: false do %>
        <%= label_tag "ongoing" %>
         <%= check_box_tag :disable_end_date %>
-      <%= f.input :end_date %>
+      <%= f.input :end_date, html5: true %>
       <%= f.input :status, as: :select, collection: ["start", "in progress", "end"], placeholder: 'Select Status', label: "Select Status" %>
       <%= f.button :submit, id: "treatment-button"%>
     <% end %>
