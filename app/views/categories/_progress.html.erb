@@ -14,7 +14,11 @@
       <div class="swiper-wrapper">
         <% trackers.each do |tracker| %>
           <div class="swiper-slide swiper-card">
-            <%= cl_image_tag tracker.photo.key, height: "100%", class: "carousel-image", id: "border-radius" %>
+            <% if tracker.photo.attached? %>
+            <%= cl_image_tag tracker.photo.key, height: "100%", class: "carousel-image", id: "border-radius"%>
+            <% else %>
+              <%= image_tag "Placeholder", height: "100%", class: "carousel-image", id: "border-radius"%>
+            <% end %>
 
             <div><br></div>
       <div class="swiper-pagination"></div>
