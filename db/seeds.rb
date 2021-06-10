@@ -20,10 +20,10 @@ puts "Creating database..."
 user = User.new(full_name: "Molly", email: "molly@nasa.us", password: "123456", age: "24", gender: "female", skin_color: "asian", skin_type: "combination")
 user.save!
 
-treatment = Treatment.new(user_id: user.id, skin_condition: 'eczema', start_date: '31.05.2021', end_date: '30.06.2021', status: 'start')
+treatment = Treatment.new(user_id: user.id, skin_condition: 'Eczema', start_date: '31.05.2021', end_date: '30.06.2021', status: 'start')
 treatment.save!
 
-treatment1 = Treatment.new(user_id: user.id, skin_condition: 'rash', start_date: '10.06.2021', end_date: '30.06.2021', status: 'start')
+treatment1 = Treatment.new(user_id: user.id, skin_condition: 'Rash', start_date: '10.06.2021', end_date: '30.06.2021', status: 'start')
 treatment1.save!
 
 Category.new(group: 'skincare', title: 'medications').save!
