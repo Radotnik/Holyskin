@@ -41,22 +41,20 @@
 
 .title{
   margin-bottom: 15px;
-  font-family: "Work Sans", "Comfortaa", "cursive";
+  font-family: $headers-font;
+  font-size: $size-body-l;
 }
 
 .notes{
-  font-family: "Work Sans", "Comfortaa", "cursive";
+  font-family: $headers-font;
 }
 
-.photo{
-
-  // font-family: "Work Sans", "Comfortaa", "cursive";
-}
+// .photo{
+// }
 
 .save{
   text-align: center;
-  font-family: "Work Sans", "Comfortaa", "cursive";
-
+  font-family: $body-font;
 }
 
 .notes textarea{
@@ -130,4 +128,12 @@
   margin-top: -42px;
 }
 
+
+#form-font {
+  font-family: $headers-font;
+}
+
+.nice-class {
+  font-family: $body-font;
+}
 

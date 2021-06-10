@@ -13,9 +13,10 @@
 }
 
 .card-title {
-   font-family: $body-font;
+   font-family: $headers-font;
    font-size: $size-body-m;
-   color: $grey-2;
+   font-weight: bolder;
+   color: $grey-1;
 }
 
 .tracker-circle {
@@ -68,6 +69,7 @@
 .card-tracker p {
   font-family: $body-font;
   font-size: $size-body-s;
+  font-weight: extra-light !important;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -121,6 +123,7 @@
 
 .card-tracker-infos-details b {
   color: $header-color;
+  font-family: $headers-font;
 }
 
 // .card-button-icon {
@@ -162,6 +165,8 @@
 }
 
 .card-treatment-info h3 {
+  font-family: $body-font;
+  font-weight: lighter;
   padding: 20px;
   justify-content: center;
   align-content: center;
@@ -169,22 +174,19 @@
 }
 
 .card-add-treatment {
-  font-size: $size-body-m;
-  font-family: "Comfortaa", "cursive";
-  color: $grey-2;
-  display: flex;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 18px;
-  position: relative;
-  padding: 5px;
-  flex-direction: row;
-  background: $info-color;
+  text-align: center;
+  font-family: $body-font;
 }
 
-.card-add-treatment h3 {
-  color: $grey-2;
-  padding: 10px;
+#new-button {
+  border: none!important;
+  margin-top: 3px;
+  background-color: $info-color;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  color: $grey-5;
 }
+
 
 .same-tracker{
   width: 136px;
@@ -219,3 +221,4 @@
   align-items: center;
   width: 127%;
 }
+
