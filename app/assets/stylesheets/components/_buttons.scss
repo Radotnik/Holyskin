@@ -53,6 +53,9 @@
   color: $grey-5;
 }
 
+.progress-button a {
+   color: $grey-5 !important;
+}
 // #save-button:hover {
 //   box-shadow: 0 0 2px;
 //   -webkit-transition: .2s;
@@ -80,6 +83,8 @@
   color: $grey-1;
   font-family: $body-font;
 }
+
+
 
 // #treatment-button:hover {
 //   box-shadow: 0 0 2px;
