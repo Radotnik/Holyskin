@@ -1,10 +1,10 @@
 <div>
-  <h1><%= category.title %></h1>
+  <h1><%= category.title.capitalize %></h1>
 </div>
 <div>
   <h5><span><%= "You haven’t uploaded any progress trackers with pictures yet!" if trackers.empty? %></span></h5>
 
-  <div class="card-tracker-links">
+  <div class="progress-button">
     <h5><%= link_to "New progress tracker", new_treatment_tracker_path({
       treatment_id: treatment.id,
       category_id: category.id,
@@ -12,6 +12,8 @@
     }) %></h5>
   </div>
 </div>
+
+<br>
 
 <!-- Slider main container -->
 <!-- Swiper -->
@@ -21,8 +23,10 @@
           <div class="swiper-slide swiper-card">
             <%= cl_image_tag tracker.photo.key, height: "100%", class: "carousel-image"%>
 
+            <div><br></div>
+
             <div class="card-tracker-infos-details" id="progress">
-              <p><b><%= tracker.created_at %></b></p>
+              <p><b><%= tracker.created_at.strftime("%-d %B %Y") %></b></p>
               <p>rating: <%= tracker.rating %></p>
               <p><%= tracker.notes%> </p>
             </div>
