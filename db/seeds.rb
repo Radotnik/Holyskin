@@ -51,22 +51,22 @@ tracker.save!
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '7', notes: 'Not much sun exposure', created_at: "2021-05-31")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '7', notes: 'Good sleep', created_at: "2021-05-31")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '7', notes: 'Good sleep', created_at: "2021-05-31")
+#tracker.save!
 
 
 #_______________________Day 1
 
 file = URI.open("https://i.imgur.com/Kd9oyAX.png")
-tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '2', notes: 'Hmm still bad, but maybe a little progress', created_at: "2021-06-01")
+tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '2', notes: 'Maybe a little progress', created_at: "2021-06-01")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 11.png', content_type: 'image/png')
 tracker.save!
 
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '6', notes: 'Some sun exposure', created_at: "2021-06-01")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '6', notes: 'Quite good sleep', created_at: "2021-06-01")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '6', notes: 'Quite good sleep', created_at: "2021-06-01")
+#tracker.save!
 
 #_______________________Day 2
 
@@ -78,8 +78,8 @@ tracker.save!
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '8', notes: 'Not much sun exposure', created_at: "2021-06-02")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-02")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-02")
+#tracker.save!
 
 
 #_______________________Day 3
@@ -92,36 +92,36 @@ tracker.save!
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '8', notes: 'Not much sun exposure', created_at: "2021-06-03")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-03")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-03")
+#tracker.save!
 
 
 #_______________________Day 4
 
 file = URI.open("https://i.imgur.com/z0dvQhZ.png")
-tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '5', notes: 'Feeling some progress', created_at: "2021-06-04")
+tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '6', notes: 'Feeling some progress', created_at: "2021-06-04")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 44.png', content_type: 'image/png')
 tracker.save!
 
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '8', notes: 'Not much sun exposure', created_at: "2021-06-04")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-04")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-04")
+#tracker.save!
 
 
 #_______________________Day 5
 
 file = URI.open("https://i.imgur.com/ggrRRFj.png")
-tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '8', notes: 'Progress feeling confident :)', created_at: "2021-06-05")
+tracker = Tracker.new(category_id: Category.fourth.id, treatment_id: treatment.id, rating: '8', notes: 'Feeling confident :)', created_at: "2021-06-05")
 tracker.photo.attach(io: file, filename: 'Eczema Knees Day 55.png', content_type: 'image/png')
 tracker.save!
 
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '8', notes: 'Not much sun exposure', created_at: "2021-06-05")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-05")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-05")
+#tracker.save!
 
 #_______________________Day 6
 
@@ -133,8 +133,8 @@ tracker.save!
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '3', notes: 'Got quite some sun the last days :(', created_at: "2021-06-09")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '3', notes: 'Soo bad, soooo tired, barely slept the last days :(', created_at: "2021-06-09")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '3', notes: 'Soo bad, soooo tired, barely slept the last days :(', created_at: "2021-06-09")
+#tracker.save!
 
 #_______________________Day 7
 
@@ -146,8 +146,8 @@ tracker.save!
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '8', notes: 'Not much sun exposure', created_at: "2021-06-10")
 tracker.save!
 
-tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-10")
-tracker.save!
+#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-10")
+#tracker.save!
 
 
 #_______________________Day 8
