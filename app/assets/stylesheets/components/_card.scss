@@ -126,6 +126,10 @@
   font-family: $headers-font;
 }
 
+#progress p {
+  font-size: $size-body-s;
+  // margin-left: 20px;
+}
 // .card-button-icon {
 //   height: 50px;
 //   width: 50px;
