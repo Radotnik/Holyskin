@@ -4,13 +4,6 @@
 <div>
   <h5><span><%= "You haven’t uploaded any progress trackers with pictures yet!" if trackers.empty? %></span></h5>
 
-  <div class="progress-button">
-    <h5><%= link_to "New progress tracker", new_treatment_tracker_path({
-      treatment_id: treatment.id,
-      category_id: category.id,
-      group: category.group
-    }) %></h5>
-  </div>
 </div>
 
 <br>
@@ -24,17 +17,24 @@
             <%= cl_image_tag tracker.photo.key, height: "100%", class: "carousel-image"%>
 
             <div><br></div>
+      <div class="swiper-pagination"></div>
 
             <div class="card-tracker-infos-details" id="progress">
               <p><b><%= tracker.created_at.strftime("%-d %B %Y") %></b></p>
               <p>rating: <%= tracker.rating %></p>
               <p><%= tracker.notes%> </p>
             </div>
+      <div class="progress-button">
+        <h5><%= link_to "New progress tracker", new_treatment_tracker_path({
+          treatment_id: treatment.id,
+          category_id: category.id,
+          group: category.group
+          }) %></h5>
+      </div>
           </div>
         <% end %>
 
       </div>
-      <div class="swiper-pagination"></div>
     </div>
 
 

@@ -136,3 +136,17 @@
   font-family: $body-font;
 }
 
+#yield-wrap{
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid;
+  margin: 10px;
+  margin-top: 69px;
+  box-shadow: 0 0 20px #BBDEFB;
+}
+
+#yield-wrap h1{
+  margin-top: 20px;
+  margin-bottom: -8px;
+}
