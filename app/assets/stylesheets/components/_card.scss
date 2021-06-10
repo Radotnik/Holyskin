@@ -26,6 +26,7 @@
 }
 
 .card-tracker-all {
+
   // padding: 20px;
   // margin: 20px 100px 0 100px;
 }
@@ -184,5 +185,40 @@
   padding: 10px 20px 10px 20px;
   border-radius: 5px;
   color: $grey-5;
+}
+
+
+.same-tracker{
+  width: 136px;
+  display: flex;
+  // overflow: hidden;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // margin: 20px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.new-tracker{
+  width: 136px;
+  display: flex;
+  // overflow: hidden;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // margin: 20px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.trackers-both{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 127%;
 }
 
