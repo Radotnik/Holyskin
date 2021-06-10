@@ -11,11 +11,11 @@
 }
 
 .navbar-brand span {
-  font-family: $body-font;
-  font-size: $size-body-m;
-  // font-weight: bold;
+  font-family: $headers-font;
+  font-size: $size-body-l;
+  font-weight: bolder;
   color: $header-color;
-  margin-left: 6px;
+  // margin-left: 2px;
 }
 
 // #nav {
