@@ -1,15 +1,30 @@
 <div>
-  <h1><%= category.title %></h1>
+  <h1><%= category.title.capitalize %></h1>
 </div>
 <div>
   <h5><span><%= "You haven’t uploaded any trackers here yet!" if trackers.empty? %></span></h5>
-  <div>
-    <%= link_to "New tracker here", new_treatment_tracker_path({
-      treatment_id: treatment.id,
-      category_id: category.id,
-      group: category.group
-    }) %>
+</div>
+  <div class="trackers-both">
+    <div class="same-tracker">
+      <%= link_to new_treatment_tracker_path({
+        treatment_id: treatment.id,
+        category_id: category.id,
+        group: category.group
+      }) do %>
+      <i class="fas fa-plus"></i>
+      Tracker here
+      <% end %>
+    </div>
+    <div class="new-tracker">
+      <%= link_to treatment_categories_path, label: '<i class="far fa-plus-square"></i>'.html_safe do %>
+      <i class="fas fa-plus"></i>
+      Other tracker
+      <% end %>
+    </div>
   </div>
+
+<div class="chart">
+  <%= line_chart trackers.group_by_day(:created_at).maximum(:rating) %>
 </div>
 
 <div class="card-tracker-all">
@@ -77,12 +92,6 @@
   <% end %>
 </div>
 
-<div>
-  <%= line_chart trackers.group_by_day(:created_at).maximum(:rating) %>
-</div>
 
-<br>
 
-<div>
-  <h5> <%= link_to "Add a different tracker", treatment_categories_path %> </h5>
-</div>
+
