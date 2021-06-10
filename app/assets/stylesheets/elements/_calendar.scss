@@ -34,8 +34,11 @@
     width: 100%;
     margin-top: 15px;
     padding-top: 10px;
+    justify-content: flex-start;
+
 
     td {
+      text-align: start !important;
       width: 120px !important;
       &.future.current-month{
         background-color: white !important;
