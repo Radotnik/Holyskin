@@ -18,17 +18,30 @@
   line-height: 1em;
 }
 
-.image_tag img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+.image_tag {
+    //display: block;
+    margin: auto 0;
+    max-height: 95vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    //margin-right: auto;
+    //margin-top: 50px;
 }
 
-h2 {
+ h2 {
   color: $header-color !important;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  //display: block;
+  //margin-left: auto;
+  //margin-right: auto;
 }
+
+.stretched-link {
+  overflow: hidden;
+
+}
+
 
