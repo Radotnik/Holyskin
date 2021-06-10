@@ -19,7 +19,7 @@
       <div class="swiper-wrapper">
         <% trackers.each do |tracker| %>
           <div class="swiper-slide swiper-card">
-            <%= cl_image_tag tracker.photo.key, height: "100%", class: "carousel-image"%>
+            <%= cl_image_tag tracker.photo.key, height: "100%", class: "carousel-image", id: "border-radius" %>
 
             <div class="card-tracker-infos-details" id="progress">
               <p><b><%= tracker.created_at %></b></p>

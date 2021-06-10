@@ -22,7 +22,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   margin-top: 50px;
+}
+
+#dashboard h3 {
+  font-size: $size-body-m;
+}
+
+#dashboard h2 {
+  font-weight: bolder;
 }
 
 a {
@@ -35,14 +44,18 @@ a {
 body {
   color: $grey-2 !important;
   // background-color: $secondary-color !important;
-  background: rgb(226,241,247);
-  background: linear-gradient(148deg, rgba(226,241,247,1) 33%, rgba(226,241,247,0.1774685650887574) 56%);
+  background: #fafafa;
+  // background: linear-gradient(148deg, rgba(226,241,247,1) 33%, rgba(226,241,247,0.1774685650887574) 56%);
+}
+
+.treatment-header h1 {
+  font-weight: bold;
 }
 
 h1 {
   color: $header-color;
   font-family: $headers-font;
-  font-weight: bold;
+  // font-weight: bolder;
 }
 
 h2 {
@@ -65,4 +78,8 @@ p {
   color: $grey-2;
   font-size: 12px;
   font-weight: extra-light !important;
+}
+
+#border-radius {
+  border-radius: 11px;
 }
