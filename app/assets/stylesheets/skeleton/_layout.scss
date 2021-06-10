@@ -26,6 +26,8 @@
 }
 
 a {
+  font-family: $body-font;
+  font-weight: normal;
   text-decoration: none !important;
   color: $grey-2 !important;
 }
@@ -39,17 +41,28 @@ body {
 
 h1 {
   color: $header-color;
-  font-family: $body-font;
+  font-family: $headers-font;
   font-weight: bold;
 }
 
 h2 {
-  color: $grey-2;
+  color: $header-color;
+  font-family: $headers-font;
+}
+
+h3 {
+  font-family: $headers-font;
+}
+
+h4 {
   font-family: $body-font;
+  font-weight: light !important;
+  font-size: 10px !important;
 }
 
 p {
+  font-family: $body-font;
   color: $grey-2;
-  font-size: 8px;
-
+  font-size: 12px;
+  font-weight: extra-light !important;
 }
