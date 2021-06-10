@@ -1,7 +1,7 @@
 <div class="dashboard-layout container" id="dashboard">
 
 <h2>Hello, <%= current_user.full_name %>!</h2>
-<h4>Your current healing journey: <%= @treatment.skin_condition %></h4>
+<h3>Your current healing journey: <%= @treatment.skin_condition %></h3>
 
 <!-- <div class="popup" onclick="myFunction()">Click me to toggle the popup!
   <span class="popuptext" id="myPopup">A Simple Popup!</span>
@@ -30,13 +30,13 @@
       <% latest_trackers = @trackers.last(5) %>
 
       <% latest_trackers.each do |tracker| %>
-        <div class="card-tracker">
+        <div class="card-tracker" id="border-radius">
           <div class="card-tracker-infos">
 
 
             <div class="date-icon">
             <div class="card-tracker-icon">
-              <p style="font-weight: bold;"><%= tracker.start_time.strftime("%-d %B %Y")%> </p>
+              <p style="font-weight: bold;"><%= tracker.created_at.strftime("%-d %B %Y")%> </p>
 
                 <% if tracker.category.group == "skincare" %>
                   <div class="btn btn-icon btn-skincare" style="height: 50px; width: 50px; margin-left: 180px;">
@@ -92,16 +92,16 @@
     </div>
 
   <div class="cards-links">
-    <div class="card-tracker-links">
+    <div class="card-tracker-links" id="border-radius">
       <div id="link">
-        <%= image_tag ('Long.png'), style: "height: 110px;width: auto;" %>
+        <%= image_tag ('Long.png'), style: "height: 90px;width: auto;" %>
           <h5 id="new"><%= link_to "Progress Gallery", treatment_category_path(@treatment.id, @progress_category_id) %> </h5>
       </div>
     </div>
 
-    <div class="card-tracker-links">
+    <div class="card-tracker-links" id="border-radius">
       <div id="link">
-        <%= image_tag ('plus.png'), style: "height: 110px;width: auto;"%>
+        <%= image_tag ('plus.png'), style: "height: 100px;width: auto;"%>
           <h5 id="new"><%= link_to "New Entry", treatment_categories_path %></h5>
       </div>
     </div>
