@@ -5,11 +5,7 @@
 
 }
 .ml7 .text-wrapper {
-  //position: relative;
   display: inline-block;
-  //padding-top: 6em;
-  //padding-right: 0.05em;
-  //padding-bottom: 6em;
   overflow: hidden;
 }
 .ml7 .letter {
@@ -19,8 +15,6 @@
 }
 
 .image_tag {
-    //display: block;
-    //margin: auto 0;
     max-height: 95vh;
     width: 100%;
     display: flex;
@@ -28,21 +22,18 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 100%;
-
-    //margin-right: auto;
-    //margin-top: 50px;
 }
 
- h2 {
+.image_tag h2 {
   color: $header-color !important;
-  //display: block;
-  //margin-left: auto;
-  //margin-right: auto;
+  font-size: 24px;
 }
 
 .stretched-link {
   overflow: hidden;
-
 }
 
+#landing-logo {
+  margin: 20px;
+}
 
