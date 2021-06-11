@@ -28,16 +28,16 @@
               <p>rating: <%= tracker.rating %></p>
               <p><%= tracker.notes%> </p>
             </div>
+          </div>
+        <% end %>
+
+      </div>
       <div class="progress-button">
         <h5><%= link_to "New progress tracker", new_treatment_tracker_path({
           treatment_id: treatment.id,
           category_id: category.id,
           group: category.group
           }) %></h5>
-      </div>
-          </div>
-        <% end %>
-
       </div>
     </div>
 

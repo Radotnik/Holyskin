@@ -39,29 +39,29 @@
   margin-top: 3px;
   background-color: $info-color;
   padding: 10px 20px 10px 20px;
-  border-radius: 5px;
+  border-radius: 11px;
   color: $grey-5;
 }
-
 .progress-button {
   border: none!important;
   margin-top: 3px;
+  margin-left: 40px;
   text-align: center;
   background-color: $info-color;
-  padding: 10px 20px 10px 20px;
-  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 11px;
   color: $grey-5;
+  width: 15rem;
 }
 
 .progress-button a {
    color: $grey-5 !important;
 }
+
 // #save-button:hover {
 //   box-shadow: 0 0 2px;
 //   -webkit-transition: .2s;
 // }
-
-
 #c {
   font-size: 1.5rem;
   color: $grey-5;
