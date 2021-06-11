@@ -106,8 +106,8 @@ tracker.save!
 tracker = Tracker.new(category_id: Category.fifth.id, treatment_id: treatment.id, rating: '8', notes: 'Not much sun exposure', created_at: "2021-06-04")
 tracker.save!
 
-#tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-04")
-#tracker.save!
+tracker = Tracker.new(category_id: Category.find_by(title: 'sleep').id, treatment_id: treatment.id, rating: '8', notes: 'Good sleep', created_at: "2021-06-04")
+tracker.save!
 
 
 #_______________________Day 5
