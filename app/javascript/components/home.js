@@ -1,4 +1,5 @@
-var textWrapper = document.querySelector('.ml7 .letters');
+const movingLetters = () => {
+  var textWrapper = document.querySelector('.ml7 .letters');
 if (textWrapper) {
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -20,4 +21,6 @@ if (textWrapper) {
       delay: 1000
     });
 }
+}
 
+export {movingLetters}

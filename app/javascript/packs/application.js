@@ -25,12 +25,10 @@ require("channels")
 // External imports
 import "bootstrap";
 import {disable} from "../components/disable_end_date.js";
-import "../components/home.js";
 
 import 'swiper/swiper-bundle.css';
 import {initSwiper} from "../components/swiper";
-import "../components/popup.js";
-
+import {movingLetters} from "../components/home.js";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -39,6 +37,7 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initSwiper();
+  movingLetters();
 });
 
 import "chartkick/chart.js"
