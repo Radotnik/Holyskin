@@ -34,6 +34,7 @@
 
 .card-tracker {
   display: flex;
+  width: 100%;
   // flex-shrink: 2;
   // justify-content: center;
   overflow: hidden;
@@ -41,10 +42,31 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 20px;
-  padding-right: 30px;
+  // padding-right: 30px;
   // justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+}
+
+.dashboard-test {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  // margin: 8px auto;
+  margin-left: 10px;
+  margin-bottom: -22px;
+
+  h2 {
+    padding-top: 2px;
+    margin-right: 8px;
+  }
+
+  h3 {
+    background: $info-color;
+    color: $grey-5;
+    border-radius: 8px;
+    padding: 8px 8px 24px 8px
+  }
 }
 
 .card-tracker-links {
@@ -54,6 +76,7 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 20px;
+  font-size: 16px !important;
   align-items: center;
   border-radius: 5px;
 }
@@ -84,6 +107,7 @@
 }
 
 .card-tracker-infos {
+  width: 100%;
   margin: 20px;
   // justify-content: space-evenly;
 }
@@ -97,7 +121,7 @@
 
 #new {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .fas.fa-plus-circle {
@@ -120,16 +144,26 @@
 .card-tracker-icon {
   display: flex;
   // flex-direction: row;
+
+  p {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 .card-tracker-infos-details {
   display: flex;
   flex-direction: column;
   // margin-left: 20px;
+}
 
+#title b {
+  font-size: 20px !important;
 }
 
 .card-tracker-infos-details b, p{
+  font-size: 20px !important;
   color: $header-color;
   font-family: $headers-font;
 }
@@ -174,6 +208,10 @@
   // background: linear-gradient(148deg, rgba(234, 191, 250, 0.40) 33%, rgba(226,241,247,0.1774685650887574) 56%);
 
 
+}
+
+.card-add-treatment {
+  text-align: center;
 }
 
 .card-treatment-info h3 {
