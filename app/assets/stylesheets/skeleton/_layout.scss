@@ -28,8 +28,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  margin-top: 50px;
+  //text-align: center;
+  margin-top: 24px;
 }
 
 #dashboard h3 {
@@ -50,6 +50,10 @@ a {
 body {
 background: rgb(213,207,255);
 background: radial-gradient(circle, rgba(213,207,255,0.22247191011235956) 5%, rgba(213,207,255,0.11910112359550562) 95%);
+}
+
+.treatment-header {
+  text-align: center;
 }
 
 .treatment-header h1 {

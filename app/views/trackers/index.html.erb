@@ -1,7 +1,9 @@
 <div class="dashboard-layout container" id="dashboard">
 
-<h2>Hello, <%= current_user.full_name %>!</h2>
-<h3>Current healing journey: <%= @treatment.skin_condition %></h3>
+<div class="dashboard-test">
+  <h3><%= @treatment.skin_condition.capitalize %></h3>
+  <h2>Hey, <%= current_user.full_name.capitalize %>!</h2>
+</div>
 
 <!-- <div class="popup" onclick="myFunction()">Click me to toggle the popup!
   <span class="popuptext" id="myPopup">A Simple Popup!</span>
@@ -34,12 +36,19 @@
           <div class="card-tracker-infos">
 
 
-            <div class="date-icon">
+
+
+            <div class="card-tracker-infos-details">
+              <p><b><%= tracker.category.title %> | <%= tracker.category.group %></b></p>
+              <p>rating: <%= tracker.rating %></p>
+              <p>"<%= tracker.notes%>"</p>
+          </div>
+                      <div class="date-icon">
             <div class="card-tracker-icon">
               <p style="font-weight: bold;"><%= tracker.created_at.strftime("%-d %B %Y")%> </p>
 
                 <% if tracker.category.group == "skincare" %>
-                  <div class="btn btn-icon btn-skincare" style="height: 50px; width: 50px; margin-left: 180px;">
+                  <div class="btn btn-icon btn-skincare" style="height: 50px; width: 50px">
                     <% if tracker.category.title == "medications" %>
                       <i id="c" class="fas fa-prescription-bottle-alt"></i>
                     <% elsif tracker.category.title == "products" %>
@@ -52,7 +61,7 @@
                   </div>
 
                 <% elsif tracker.category.group == "environmental" %>
-                  <div class="btn btn-icon btn-environmental" style="height: 50px; width: 50px;  margin-left: 180px;">
+                  <div class="btn btn-icon btn-environmental" style="height: 50px; width: 50px;">
                     <% if tracker.category.title == "sun" %>
                       <i id="c" class="far fa-sun"></i>
                     <% elsif tracker.category.title == "humidity" %>
@@ -65,7 +74,7 @@
                   </div>
 
                 <% elsif tracker.category.group == "lifestyle" %>
-                  <div class="btn btn-icon btn-lifestyle" style="height: 50px; width: 50px;  margin-left: 180px;">
+                  <div class="btn btn-icon btn-lifestyle" style="height: 50px; width: 50px;">
                     <% if tracker.category.title == "sleep" %>
                       <i id="c" class="fas fa-bed"></i>
                     <% elsif tracker.category.title == "stress" %>
@@ -85,6 +94,7 @@
               <p>rating: <%= tracker.rating %></p>
               <p>"<%= tracker.notes%>"</p>
           </div>
+
         </div>
       </div>
 
