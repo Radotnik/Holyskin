@@ -6,7 +6,7 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   # config.hosts << "4a24b80e6c30.ngrok.io"
-
+  config.hosts << "d37b62f2999c.ngrok.io"
   config.cache_classes = false
 
   # Do not eager load code on boot.
