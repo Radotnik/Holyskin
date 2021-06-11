@@ -164,11 +164,14 @@
   // font-family: "Comfortaa", "cursive";
   color: $grey-2;
   display: flex;
-  background: white;
+  background: #fff;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 18px;
   position: relative;
   padding: 15px;
+  // background: linear-gradient(148deg, rgba(234, 191, 250, 0.40) 33%, rgba(226,241,247,0.1774685650887574) 56%);
+
+
 }
 
 .card-treatment-info h3 {

@@ -48,10 +48,8 @@ a {
 }
 
 body {
-  // color: $grey-2 !important;
-  // background-color: #F9F3FE !important;
-  // background: #fafafa;
-  // background: linear-gradient(148deg, rgba(234, 191, 250, 0.40) 33%, rgba(226,241,247,0.1774685650887574) 56%);
+background: rgb(213,207,255);
+background: radial-gradient(circle, rgba(213,207,255,0.22247191011235956) 5%, rgba(213,207,255,0.11910112359550562) 95%);
 }
 
 .treatment-header h1 {
